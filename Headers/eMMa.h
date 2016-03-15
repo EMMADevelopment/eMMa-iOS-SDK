@@ -255,22 +255,6 @@ For a simple configuration put this in you AppDelegate's method:
  */
 +(void) checkForAdBall;
 
-/**
- AdBall configuration options
- 
- eMMaAdBallNotInBackground -> Don't check adball on return of background
- 
- @param options bitmask of options
- */
-+(void) setAdBallOptions: (eMMaAdBallOptions) options;
-
-/**
- Use checkForAdBall in order to check if show AdBalls added on eMMa dashboard. If you want you can pass a custom NSString that labels the AdBall in case you use more than one AdBalls on your app and you need to distinguish between them. 
- 
- @param label Label to check the adball
- */
-+(void) checkForAdBallWithLabel: (NSString*) label;
-
 ///---------------------------------------------------------------------------------------
 /// @name eMMa Banner
 ///---------------------------------------------------------------------------------------
@@ -379,32 +363,6 @@ For a simple configuration put this in you AppDelegate's method:
  *  Checks for DynamicTab on eMMa Platform
  */
 +(void) checkPromoOnTabBar;
-
-/*
-+(void)checkForPromoOnTabBar:(UITabBarController*)tabBarController atIndex:(NSInteger)index withTabBarItem:(UITabBarItem*)tabBarItem;
-
-+(void)checkForPromoOnTabBar:(UITabBarController*)tabBarController atIndex:(NSInteger)index;
-
-+(void)checkForPromoOnTabBar:(UITabBarController*)tabBarController;
-
-+(void)checkForPromoOnTabBar:(UITabBarController*)tabBarController atIndex:(NSInteger)index withTabBarItem:(UITabBarItem*)tabBarItem autoCreation:(BOOL)autoCreation;
-
-+(void)checkForPromoOnTabBar:(UITabBarController*)tabBarController atIndex:(NSInteger)index autoCreation:(BOOL)autoCreation;
-
-+(void)checkForPromoOnTabBar:(UITabBarController*)tabBarController autoCreation:(BOOL)autoCreation;
-
-+(void)checkForPromoOnTabBar:(UITabBarController*)tabBarController atIndex:(NSInteger)index withTabBarItem:(UITabBarItem*)tabBarItem params:(NSDictionary*)params;
-
-+(void)checkForPromoOnTabBar:(UITabBarController*)tabBarController atIndex:(NSInteger)index params:(NSDictionary*)params;
-
-+(void)checkForPromoOnTabBar:(UITabBarController*)tabBarController params:(NSDictionary*)params;
-
-+(void)checkForPromoOnTabBar:(UITabBarController*)tabBarController atIndex:(NSInteger)index withTabBarItem:(UITabBarItem*)tabBarItem autoCreation:(BOOL)autoCreation params:(NSDictionary*)params;
-
-+(void)checkForPromoOnTabBar:(UITabBarController*)tabBarController atIndex:(NSInteger)index autoCreation:(BOOL)autoCreation params:(NSDictionary*)params;
-
-+(void)checkForPromoOnTabBar:(UITabBarController*)tabBarController autoCreation:(BOOL)autoCreation params:(NSDictionary*)params;
-
 
 ///---------------------------------------------------------------------------------------
 /// @name eMMa Rate Alert
@@ -578,62 +536,13 @@ For a simple configuration put this in you AppDelegate's method:
  */
 +(void)setWebSDKDomain:(NSString*) domain;
 
-///---------------------------------------------------------------------------------------
-/// @name Deprecated Methods. Removed from future releases
-///---------------------------------------------------------------------------------------
 
-+(void)checkForWebView __deprecated;
-+(void) checkForWebViewWithOptions: (NSUInteger) options __deprecated;
-+(void) webViewSetCustomCloseButton: (UIButton*) button __deprecated;
-+(void)startOrder:(NSString*)orderId customerId:(NSString*)customerId totalPrice:(float)totalPrice extras:(NSDictionary*)extras __deprecated;
-+(void)startOrder:(NSString*)orderId customerId:(NSString*)customerId totalPrice:(float)totalPrice __deprecated;
-+(void)startOrder:(NSString*)orderId totalPrice:(float)totalPrice __deprecated;
-+(void)startOrder:(NSString*)orderId totalPrice:(float)totalPrice coupon:(NSString*)coupon extras:(NSDictionary*)extras __deprecated;
-+(void)startOrder:(NSString*)orderId totalPrice:(float)totalPrice coupon:(NSString*)coupon __deprecated;
-+(void)startOrder:(NSString*)orderId totalPrice:(float)totalPrice extras:(NSDictionary*)extras __deprecated;
-+(void)startOrder:(NSString*)orderId customerId:(NSString*)customerId totalPrice:(float)totalPrice currencyCode:(NSString*)currencyCode  coupon:(NSString*)coupon __deprecated;
-+(void)startOrder:(NSString*)orderId customerId:(NSString*)customerId totalPrice:(float)totalPrice  currencyCode:(NSString*)currencyCode extras:(NSDictionary*)extras __deprecated;
-+(void)startOrder:(NSString*)orderId customerId:(NSString*)customerId totalPrice:(float)totalPrice currencyCode:(NSString*)currencyCode __deprecated;
-+(void)startOrder:(NSString*)orderId totalPrice:(float)totalPrice currencyCode:(NSString*)currencyCode __deprecated;
-+(void)startOrder:(NSString*)orderId totalPrice:(float)totalPrice  currencyCode:(NSString*)currencyCode coupon:(NSString*)coupon extras:(NSDictionary*)extras __deprecated;
-+(void)startOrder:(NSString*)orderId totalPrice:(float)totalPrice  currencyCode:(NSString*)currencyCode coupon:(NSString*)coupon __deprecated;
-+(void)startOrder:(NSString*)orderId totalPrice:(float)totalPrice  currencyCode:(NSString*)currencyCode extras:(NSDictionary*)extras __deprecated;
-+(void)checkForWebviewWithCustomCloseButton:(UIButton*)button __deprecated;
-+(void)checkForWebviewWithCustomCloseButton:(UIButton*)button autoCreation:(BOOL)autoCreation __deprecated;
-+(void)checkForWebviewWithAutoCreation:(BOOL)autoCreation __deprecated;
-+(void)checkForWebviewWithParams:(NSDictionary*)params __deprecated;
-+(void)checkForWebviewWithCustomCloseButton:(UIButton*)button params:(NSDictionary*)params __deprecated;
-+(void)checkForWebviewWithCustomCloseButton:(UIButton*)button autoCreation:(BOOL)autoCreation params:(NSDictionary*)params __deprecated;
-+(void)checkForWebviewWithAutoCreation:(BOOL)autoCreation params:(NSDictionary*)params __deprecated;
-+(void)checkForWebviewWithLabel:(NSString*)label __deprecated;
-+(void)checkForWebviewWithParams:(NSDictionary*)params label:(NSString*)label __deprecated;
-+(void)checkForWebviewWithCustomCloseButton:(UIButton*)button params:(NSDictionary*)params label:(NSString*)label __deprecated;
-+(void)checkForWebviewWithCustomCloseButton:(UIButton*)button label:(NSString*)label __deprecated;
-+(void)checkForWebviewWithDelegate:(id)delegate __deprecated;
-+(void)checkForWebviewWithCustomCloseButton:(UIButton*)button withDelegate:(id)delegate __deprecated;
-+(void)checkForWebviewWithCustomCloseButton:(UIButton*)button autoCreation:(BOOL)autoCreation withDelegate:(id)delegate __deprecated;
-+(void)checkForWebviewWithAutoCreation:(BOOL)autoCreation withDelegate:(id)delegate __deprecated;
-+(void)checkForWebviewWithParams:(NSDictionary*)params withDelegate:(id)delegate __deprecated;
-+(void)checkForWebviewWithCustomCloseButton:(UIButton*)button params:(NSDictionary*)params withDelegate:(id)delegate __deprecated;
-+(void)checkForWebviewWithCustomCloseButton:(UIButton*)button autoCreation:(BOOL)autoCreation params:(NSDictionary*)params withDelegate:(id)delegate __deprecated;
-+(void)checkForWebviewWithAutoCreation:(BOOL)autoCreation params:(NSDictionary*)params withDelegate:(id)delegate __deprecated;
-+(void)checkForWebviewWithLabel:(NSString*)label withDelegate:(id)delegate __deprecated;
-+(void)checkForWebviewWithParams:(NSDictionary*)params label:(NSString*)label withDelegate:(id)delegate __deprecated;
-+(void)checkForWebviewWithCustomCloseButton:(UIButton*)button params:(NSDictionary*)params label:(NSString*)label withDelegate:(id)delegate __deprecated;
-+(void)checkForWebviewWithCustomCloseButton:(UIButton*)button label:(NSString*)label withDelegate:(id)delegate __deprecated;
-+(void)startPushSystem:(NSDictionary*)options withDelegate:(id)delegate __deprecated;
-+(void)startPushSystem:(NSDictionary*)options showAlert:(BOOL)showAlert __deprecated;
-+(void)startPushSystem:(NSDictionary*)options withDelegate:(id)delegate showAlert:(BOOL)showAlert __deprecated;
-+(void)addRateAlertForAppStoreURL:(NSString*)appStoreURL timeFrequence:(int)timeFrequence withTitle:(NSString*)title message:(NSString*)message cancelButton:(NSString*)cancelButton rateItButton:(NSString*)rateItButton laterButton:(NSString*)laterButton __deprecated;
-+(void)addRateAlertForAppStoreURL:(NSString*)appStoreURL withTitle:(NSString*)title message:(NSString*)message cancelButton:(NSString*)cancelButton rateItButton:(NSString*)rateItButton laterButton:(NSString*)laterButton __deprecated;
-+(void)addRateAlertForAppStoreURL:(NSString*)appStoreURL timeFrequence:(int)timeFrequence __deprecated;
-+(void)addRateAlertForAppStoreURL:(NSString*)appStoreURL timeFrequence:(int)timeFrequence withTitle:(NSString*)title message:(NSString*)message cancelButton:(NSString*)cancelButton rateItButton:(NSString*)rateItButton laterButton:(NSString*)laterButton appUpdate:(BOOL)appUpdate __deprecated;
-+(void)addRateAlertForAppStoreURL:(NSString*)appStoreURL withTitle:(NSString*)title message:(NSString*)message cancelButton:(NSString*)cancelButton rateItButton:(NSString*)rateItButton laterButton:(NSString*)laterButton appUpdate:(BOOL)appUpdate __deprecated;
-+(void)addRateAlertForAppStoreURL:(NSString*)appStoreURL timeFrequence:(int)timeFrequence appUpdate:(BOOL)appUpdate __deprecated;
-+(void)addRateAlertForAppStoreURL:(NSString*)appStoreURL appUpdate:(BOOL)appUpdate __deprecated;
-+(void)checkForAdBall:(UIWindow*)window __deprecated;
-+(void)checkForAdBall:(UIWindow*)window autoCreation:(BOOL)autoCreation label:(NSString*)label __deprecated;
-+(void)checkForAdBall:(UIWindow*)window autoCreation:(BOOL)autoCreation __deprecated;
-+(void)checkForAdBall:(UIWindow*)window label:(NSString*)label __deprecated;
+/**
+ * Returns if session is started and running
+ *
+ * @return true if started
+ */
++(BOOL) isSessionStarted;
+
 
 @end
