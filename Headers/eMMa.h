@@ -45,6 +45,15 @@ For a simple configuration put this in you AppDelegate's method:
 */
 +(void)starteMMaSession:(NSString*)appKey;
 
+/*
+ Starts the session with our servers.
+ 
+ @param appKey You app key
+ @param launchOptions pass the launch options on the appdelegate's didFinishLaunching method
+ */
+
++(void)starteMMaSession:(NSString*)appKey withOptions:(NSDictionary*)launchOptions;
+
 
 ///---------------------------------------------------------------------------------------
 /// @name eMMa Configuration
