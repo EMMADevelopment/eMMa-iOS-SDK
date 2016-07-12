@@ -46,14 +46,13 @@ For a simple configuration put this in you AppDelegate's method:
 +(void)starteMMaSession:(NSString*)appKey;
 
 /*
- Starts the session with our servers.
+ Starts the session with our servers. 
  
- @param appKey You app key
- @param launchOptions pass the launch options on the appdelegate's didFinishLaunching method
- */
+  @param appKey You app key
+  @param launchOptions pass the launch options on the appdelegate's didFinishLaunching method
+*/
 
 +(void)starteMMaSession:(NSString*)appKey withOptions:(NSDictionary*)launchOptions;
-
 
 ///---------------------------------------------------------------------------------------
 /// @name eMMa Configuration
@@ -272,8 +271,9 @@ For a simple configuration put this in you AppDelegate's method:
  *  Use checkForBannerOnViewcontroller in order to check if show Banner added on eMMa dashboard.
  *
  *  @param viewController the UIViewController where the banner will be seen
+ *	@param isShown block parameter is true if the banner is shown, else false
  */
-+ (void)checkForBannerOnViewController:(UIViewController*)viewController;
++(void)checkForBannerOnViewController:(UIViewController*)viewController withBlock:(eMMaOnBannerShow)onBannerBlock;
 
 /**
  *   Use checkForBannerOnViewcontroller in order to check if show Banner added on eMMa dashboard. If you want you can pass a custom NSString that labels the Banner in case you use more than one Banner on your app and you need to distinguish between them.
@@ -281,7 +281,7 @@ For a simple configuration put this in you AppDelegate's method:
  *  @param viewController the UIViewController where the banner will be seen
  *  @param label          the label you assigned on eMMa for the Banner
  */
-+ (void)checkForBannerOnViewcontroller:(UIViewController*)viewController withLabel:(NSString*) label;
++(void)checkForBannerOnViewcontroller:(UIViewController*)viewController withLabel:(NSString*)label andBlock:(eMMaOnBannerShow)onBannerBlock;
 
 /**
  *  Sets the parameter to autocreate the Banner when coming from background

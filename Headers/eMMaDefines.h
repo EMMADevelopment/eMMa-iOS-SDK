@@ -68,6 +68,9 @@ typedef void(^eMMaGetUserIdBlock)(NSString* userId);
 /** Block definition for recovering coupons */
 typedef void(^eMMaGetCouponsBlock)(NSDictionary* couponsResponse);
 
+/** Block definition for banner show **/
+typedef void(^eMMaOnBannerShow)(BOOL isShown);
+
 /**
  This protocol defines the delegate methods of the push system
  */
