@@ -3,7 +3,7 @@
 //  eMMa_iOS_SDK
 //
 //  Created by Jaume Cornadó Panadés on 30/9/14.
-//  Copyright (c) 2014 moddity. All rights reserved.
+//  Copyright (c) 2017 EMMA SOLUTIONS SL. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -269,6 +269,14 @@ For a simple configuration put this in you AppDelegate's method:
  Use checkForAdBall in order to check if show AdBalls added on eMMa dashboard.
  */
 +(void) checkForAdBall;
+
+
+/**
+ Tells if AdBall is on Screen
+ 
+ @return BOOL true if is on screen
+ */
++(BOOL) isAdBallShowing;
 
 ///---------------------------------------------------------------------------------------
 /// @name eMMa Banner

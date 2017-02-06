@@ -3,7 +3,7 @@
 //  eMMa
 //
 //  Created by Jaume Cornadó Panadés on 11/11/14.
-//  Copyright (c) 2014 moddity. All rights reserved.
+//  Copyright (c) 2017 EMMA SOLUTIONS SL. All rights reserved.
 //
 #import <UIKit/UIKit.h>
 
