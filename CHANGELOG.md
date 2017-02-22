@@ -1,5 +1,9 @@
 #CHANGELOG
 
+### 3.1.9 - 22/02/2017
+AdBall usability improved. Now AdBall close with a touch out of creativity. 
+Bug fix with startview.
+
 ### 3.1.8 - 06/02/2017
 
 [NEW] Added method `[eMMa isAdBallShowing]` to check if AdBall is on screen.
