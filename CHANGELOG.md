@@ -1,5 +1,13 @@
 #CHANGELOG
 
+### 4.0.0 - 28/04/2027
+[NEW] - Rules support
+[NEW] - Event attribute support
+[NEW] - Swift support
+[NEW] - SDK now distributed as framework
+[IMPROVE] - Banner now uses full screen width
+[CHANGE] - Changed header name to #import <EMMA_iOS/eMMa.h>
+
 ### 3.1.9 - 22/02/2017
 AdBall usability improved. Now AdBall close with a touch out of creativity. 
 Bug fix with startview.
