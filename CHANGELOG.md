@@ -1,6 +1,11 @@
 #CHANGELOG
 
-### 4.0.0 - 28/04/2027
+### 4.0.1 - 04/05/2017
+
+Fixed crash push with deeplink and improvements on deeplink performance
+
+### 4.0.0 - 28/04/2017
+
 [NEW] - Rules support
 [NEW] - Event attribute support
 [NEW] - Swift support
@@ -9,7 +14,8 @@
 [CHANGE] - Changed header name to #import <EMMA_iOS/eMMa.h>
 
 ### 3.1.9 - 22/02/2017
-AdBall usability improved. Now AdBall close with a touch out of creativity. 
+
+AdBall usability improved. Now AdBall close with a touch out of creativity.
 Bug fix with startview.
 
 ### 3.1.8 - 06/02/2017
