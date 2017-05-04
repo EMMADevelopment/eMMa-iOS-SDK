@@ -1,8 +1,12 @@
 #CHANGELOG
 
-### 4.0.1 - 04/05/2017
+### 4.0.2 - 04/05/2017
 
-Fixed crash push with deeplink and improvements on deeplink performance
+Improvements on deeplink performance.
+
+### 4.0.1 - 03/05/2017
+
+Fixed crash push with deeplink.
 
 ### 4.0.0 - 28/04/2017
 
