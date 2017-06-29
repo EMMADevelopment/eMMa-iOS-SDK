@@ -125,6 +125,11 @@ For a simple configuration put this in you AppDelegate's method:
  */
 +(void)setWhitelist:(NSArray*)urls;
 
+/* 
+ Recovery the urls added in whitelist
+*/
++(NSArray*)whitelist;
+
 ///---------------------------------------------------------------------------------------
 /// @name eMMa User Stats
 ///---------------------------------------------------------------------------------------

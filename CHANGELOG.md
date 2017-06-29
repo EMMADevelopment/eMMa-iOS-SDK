@@ -1,26 +1,31 @@
 #CHANGELOG
 
+### 4.0.6 - 29/06/2007
+
+[FIX] Fix iOS 8 crash at start session.
+[IMPROVE] Several improvements.
+
 ### 4.0.2 - 04/05/2017
 
-Improvements on deeplink performance.
+[IMPROVE] Improvements on deeplink performance.
 
 ### 4.0.1 - 03/05/2017
 
-Fixed crash push with deeplink.
+[FIX] Fixed crash push with deeplink.
 
 ### 4.0.0 - 28/04/2017
 
-[NEW] - Rules support
-[NEW] - Event attribute support
-[NEW] - Swift support
-[NEW] - SDK now distributed as framework
-[IMPROVE] - Banner now uses full screen width
-[CHANGE] - Changed header name to #import <EMMA_iOS/eMMa.h>
+[NEW]  Rules support
+[NEW]  Event attribute support
+[NEW]  Swift support
+[NEW]  SDK now distributed as framework
+[IMPROVE]  Banner now uses full screen width
+[CHANGE]  Changed header name to #import <EMMA_iOS/eMMa.h>
 
 ### 3.1.9 - 22/02/2017
 
-AdBall usability improved. Now AdBall close with a touch out of creativity.
-Bug fix with startview.
+[IMPROVE] AdBall usability improved. Now AdBall close with a touch out of creativity.
+[FIX] Bug fix with startview.
 
 ### 3.1.8 - 06/02/2017
 
@@ -29,7 +34,7 @@ Bug fix with startview.
 
 ### 3.1.7.1 - 31/01/2017
 
-Bug fixed when showing Stripe.
+[FIX] Bug fixed when showing Stripe.
 
 
 ### 3.1.7 - 25/01/2017
