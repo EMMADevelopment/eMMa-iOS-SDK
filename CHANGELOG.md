@@ -1,6 +1,10 @@
 #CHANGELOG
 
-### 4.0.6 - 29/06/2007
+### 4.0.6.1 - 11/08/2017
+
+[NEW]  Bitcode support
+
+### 4.0.6 - 29/06/2017
 
 [FIX] Fix iOS 8 crash at start session.
 [IMPROVE] Several improvements.
