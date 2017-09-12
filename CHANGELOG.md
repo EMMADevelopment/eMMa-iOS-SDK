@@ -1,6 +1,6 @@
 #CHANGELOG
 
-###4.1.0 - 12/09/2017
+### 4.1.0 - 12/09/2017
 
 [NEW] Native Ads<br>
 [NEW] Automated tracking events<br>
