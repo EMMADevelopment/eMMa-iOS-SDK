@@ -1,12 +1,22 @@
 #CHANGELOG
 
+###4.1.0 - 12/09/2017
+
+[NEW] Native Ads<br>
+[NEW] Automated tracking events<br>
+[NEW] Modern method structure<br>
+[IMPROVE] AdBall positioning & performance<br>
+[IMPROVE] Rules: Automatic push now with Deeplinks<br>
+[IMPROVE] Behavior & metrics in Messages<br>
+[FIX] Bugs fixing
+
 ### 4.0.6.1 - 11/08/2017
 
 [NEW]  Bitcode support
 
 ### 4.0.6 - 29/06/2017
 
-[FIX] Fix iOS 8 crash at start session.
+[FIX] Fix iOS 8 crash at start session.<br>
 [IMPROVE] Several improvements.
 
 ### 4.0.2 - 04/05/2017
@@ -19,11 +29,11 @@
 
 ### 4.0.0 - 28/04/2017
 
-[NEW]  Rules support
-[NEW]  Event attribute support
-[NEW]  Swift support
-[NEW]  SDK now distributed as framework
-[IMPROVE]  Banner now uses full screen width
+[NEW]  Rules support<br>
+[NEW]  Event attribute support<br>
+[NEW]  Swift support<br>
+[NEW]  SDK now distributed as framework<br>
+[IMPROVE]  Banner now uses full screen width<br>
 [CHANGE]  Changed header name to #import <EMMA_iOS/eMMa.h>
 
 ### 3.1.9 - 22/02/2017
@@ -43,7 +53,7 @@
 
 ### 3.1.7 - 25/01/2017
 
-[NEW] Added method `[eMMa setWhitelist:(NSArray*)urls]` to limit urls that will be opened by Webviews.
+[NEW] Added method `[eMMa setWhitelist:(NSArray*)urls]` to limit urls that will be opened by Webviews.<br>
 [NEW] In-App communications can open deeplinks.
 
 
@@ -54,9 +64,9 @@
 
 ### 3.1.6 - 12/07/2016
 
-[NEW] Added banner callback:
+[NEW] Added banner callback:<br>
   `[eMMa checkForBannerOnViewController:(UIViewController*)viewController withBlock:(eMMaOnBannerShow)onBannerBlock]`
-  `[eMMa checkForBannerOnViewcontroller:(UIViewController*)viewController withLabel:(NSString*)label andBlock:(eMMaOnBannerShow)onBannerBlock]`
+  `[eMMa checkForBannerOnViewcontroller:(UIViewController*)viewController withLabel:(NSString*)label andBlock:(eMMaOnBannerShow)onBannerBlock]`<br>
 Add timezone name in communications with EMMA servers.
 
 
@@ -82,7 +92,7 @@ Allow push notification permission in anywhere inside app.
 
 ### 3.1.5 - 03/05/2016
 
-Added CocoaPods Service.
+Added CocoaPods Service.<br>
 Bugs fixed.
 
 

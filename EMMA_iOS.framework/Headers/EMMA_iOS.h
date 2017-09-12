@@ -15,7 +15,11 @@ FOUNDATION_EXPORT double EMMA_iOSVersionNumber;
 FOUNDATION_EXPORT const unsigned char EMMA_iOSVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <EMMA_iOS/PublicHeader.h>
-#import "eMMaDefines.h"
-#import "eMMa.h"
+#import "EMMADefines.h"
+#import "EMMA.h"
+#import "EMMAInAppRequest.h"
+#import "EMMACampaign.h"
+#import "EMMANativeAd.h"
+#import "EMMACoupon.h"
 
 

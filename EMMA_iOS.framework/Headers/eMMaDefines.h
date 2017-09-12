@@ -1,72 +1,91 @@
 //
-//  eMMaDefines.h
-//  eMMa
+//  EMMADefines.h
+//  EMMA
 //
 //  Created by Jaume Cornadó Panadés on 11/11/14.
 //  Copyright (c) 2017 EMMA SOLUTIONS SL. All rights reserved.
 //
 #import <UIKit/UIKit.h>
 
-#ifndef eMMa_eMMaDefines_h
-#define eMMa_eMMaDefines_h
+@class EMMACampaign;
+@class EMMANativeAd;
+@class EMMACoupon;
+
+
+#ifndef eMMa_EMMADefines_h
+#define eMMa_EMMADefines_h
 
 typedef void(^imageCompletionBlock)(UIImage *image);
 
 /**
  StartView Options
  */
-typedef NS_OPTIONS(NSUInteger, eMMaStartViewOptions) {
-    eMMaStartViewManualCall = (1 << 0),
-    eMMaStartViewOpenLinksInSafari = (1 << 1)
+typedef NS_OPTIONS(NSUInteger, EMMAStartViewOptions) {
+	kStartViewManualCall = (1 << 0),
+    kStartViewOpenLinksInSafari = (1 << 1)
 };
 
-typedef NS_OPTIONS(NSUInteger, eMMaAdBallOptions) {
-    eMMaAdBallNotInBackground = (1 << 0),
-    eMMaAdBallManualCall = (1 << 1)
+typedef NS_OPTIONS(NSUInteger, EMMAAdBallOptions) {
+    kAdBallNotInBackground = (1 << 0),
+    kAdBallManualCall = (1 << 1)
 };
 
-typedef NS_OPTIONS(NSUInteger, kEMMACampaignType) {
-    kEMMACampaignPush = 1,
-    kEMMACampaignStartView = 2,
-    kEMMACampaignTabBar = 3,
-    kEMMACampaignAdBall = 4,
-    kEMMACampaignBanner = 5,
-    kEMMACampaignTextBanner = 6,
-    kEMMACampaignOffer = 7,
-    kEMMACampaignAdBallWebView = 8
+typedef NS_ENUM(NSInteger, InAppType){
+    Startview,
+    Adball,
+    Strip,
+    Banner,
+    PromoTab,
+    Coupons,
+    RedeemCoupon,
+    CancelCoupon,
+    CouponValidRedeems,
+    NativeAd
 };
 
-typedef NS_OPTIONS(NSUInteger, eMMaPushSystemOptions) {
-    eMMaPushSystemDisableAlert = (1 << 0)
+typedef NS_OPTIONS(NSUInteger, EMMACampaignType) {
+    kCampaignPush = 1,
+    kCampaignStartView = 2,
+    kCampaignTabBar = 3,
+    kCampaignAdBall = 4,
+    kCampaignBanner = 5,
+    kCampaignStrip = 6,
+    kCampaignCoupon = 7,
+    kCampaignNativeAd = 8,
 };
 
-typedef NS_OPTIONS(NSUInteger, eMMaPushType) {
-    PushTypePressedOnShutdown = 0,
-    PushTypePressedOnBackground = 1,
-    PushTypeNotPressedOnShutdown = 2,
-    PushTypeNotPressedOnBackground = 3,
-    PushTypeOnActive = 4
+typedef NS_OPTIONS(NSUInteger, EMMAPushSystemOptions) {
+    kPushSystemDisableAlert = (1 << 0)
+};
+
+typedef NS_OPTIONS(NSUInteger, EMMAPushType) {
+    kPushTypePressedOnShutdown = 0,
+    kPushTypePressedOnBackground = 1,
+    kPushTypeNotPressedOnShutdown = 2,
+    kPushTypeNotPressedOnBackground = 3,
+    kPushTypeOnActive = 4
 };
 
 /** Block definition for recovering the pushtags */
-typedef void(^eMMaPushTagBlock)(NSString* pushTag, NSString* pushTagID);
+typedef void(^EMMAPushTagBlock)(NSString* pushTag, NSString* pushTagID);
 
 /** Block definition for recovering userInfo */
-typedef void(^eMMaGetUserInfoBlock)(NSDictionary* userInfo);
+typedef void(^EMMAGetUserInfoBlock)(NSDictionary* userInfo);
 
 /** Block definition for recovering userId */
-typedef void(^eMMaGetUserIdBlock)(NSString* userId);
-
-/** Block definition for recovering coupons */
-typedef void(^eMMaGetCouponsBlock)(NSDictionary* couponsResponse);
+typedef void(^EMMAGetUserIdBlock)(NSString* userId);
 
 /** Block definition for banner show **/
-typedef void(^eMMaOnBannerShow)(BOOL isShown);
+typedef void(^EMMAOnBannerShow)(BOOL isShown);
+
+/** Block definition for recovering coupons */
+typedef void(^EMMAGetCouponsBlock)(NSDictionary* couponsResponse);
+
 
 /**
  This protocol defines the delegate methods of the push system
  */
-@protocol eMMaPushDelegate <NSObject>
+@protocol EMMAPushDelegate <NSObject>
 
 @optional
 /**
@@ -87,7 +106,7 @@ typedef void(^eMMaOnBannerShow)(BOOL isShown);
 /**
  *  This protocol defines the delegate methods of the StartView
  */
-@protocol eMMaStartViewDelegate <NSObject>
+@protocol EMMAStartViewDelegate <NSObject>
 
 @optional
 
@@ -100,5 +119,21 @@ typedef void(^eMMaOnBannerShow)(BOOL isShown);
 
 @end
 
+@protocol EMMAInAppMessageDelegate <NSObject>
+@required
+-(void) onShown:(EMMACampaign*) campaign;
+-(void) onHide:(EMMACampaign*) campaign;
+-(void) onClose:(EMMACampaign*) campaign;
+@optional
+-(void) onReceived:(EMMANativeAd*) nativeAd;
+@end
+
+@protocol EMMACouponDelegate <NSObject>
+@required
+-(void) onCouponsReceived: (NSArray<EMMACoupon*>*) coupons;
+-(void) onCouponsFailure;
+@optional
+-(void) onCouponValidRedeemsReceived:(int) validRedeems;
+@end
 
 #endif
