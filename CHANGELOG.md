@@ -1,5 +1,13 @@
 # CHANGELOG
 
+### 4.1.2 - 15/09/2017
+
+[FIX] Fix crash updating version.
+
+### 4.1.1 - 15/09/2017
+
+[FIX] Bitcode support
+
 ### 4.1.0 - 12/09/2017
 
 [NEW] Native Ads<br>
