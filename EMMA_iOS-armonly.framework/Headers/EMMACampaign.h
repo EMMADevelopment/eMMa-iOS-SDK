@@ -33,7 +33,6 @@
 
 @property NSInteger times;
 
-
 +(EMMACampaignType) typeFromString: (NSString*) type;
 
 -(EMMABannerPromotion*) toBanner;
@@ -45,5 +44,9 @@
 -(void) parseCampaignInfo:(NSDictionary*) response;
 
 -(EMMAAdBallPromotion*) toAdBall;
+
+-(BOOL) checkTimesShown;
+
+-(void) updateTimesShown;
 
 @end

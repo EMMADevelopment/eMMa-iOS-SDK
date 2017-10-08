@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### 4.1.2 - 08/10/2017
+
+[FIX] Multiples bugs fixed
+
 ### 4.1.2 - 15/09/2017
 
 [FIX] Fix crash updating version.
