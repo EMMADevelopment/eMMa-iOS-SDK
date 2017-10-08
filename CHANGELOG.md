@@ -1,6 +1,6 @@
 # CHANGELOG
 
-### 4.1.2 - 08/10/2017
+### 4.1.3 - 08/10/2017
 
 [FIX] Multiples bugs fixed
 
