@@ -625,14 +625,51 @@ For a simple configuration put this in you AppDelegate's method:
  */
 +(void)inAppMessage:(InAppType)type andRequest:(EMMAInAppRequest*) request;
 
+/**
+ * Method adds delegate for inapp message requests
+ *
+ * @param delegate The delegate
+ */
 +(void)addInAppDelegate:(id<EMMAInAppMessageDelegate>) delegate;
 
+/**
+ * Method adds delegate for coupons requests
+ *
+ * @param delegate The delegate
+ */
 +(void)addCouponDelegate:(id<EMMACouponDelegate>) delegate;
 
-+(void)openNativeAd:(NSString *) nativeAdCampignId;
+/**
+ * Method opens the native ad on browser or inapp webview whatever 
+ * EMMA dashboard configuration
+ *
+ * @param nativeAdCampaignId The campaign identifier
+ */
++(void)openNativeAd:(NSString *) nativeAdCampaignId;
 
+/**
+ * Method sends impression event for specific campaign
+ * 
+ * @param campaignType The type of campaign
+ * @param campaignId The campaign identifier
+ */
 +(void)sendImpression:(EMMACampaignType) campaignType withId:(NSString*) campaignId;
 
+/**
+ * Method sends click event for specific campaign
+ *
+ * @param campaignType The type of campaign
+ * @param campaignId The campaign identifier
+ */
 +(void)sendClick:(EMMACampaignType) campaignType withId:(NSString*) campaignId;
+
+
+
+/**
+ * Handle deeplink URL for internal porpuses of EMMA, e.g deeplinks with attribution campaigns
+ *
+ * @param url The deeplink url
+ */
++(void)handleLink:(NSURL*) url;
 
 @end
