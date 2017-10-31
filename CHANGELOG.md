@@ -1,4 +1,8 @@
 # CHANGELOG
+### 4.2.0 - 29/10/2017
+
+[IMPROVE] StartView performance<br>
+[FIX] Bugs fixed
 
 ### 4.1.3 - 08/10/2017
 
