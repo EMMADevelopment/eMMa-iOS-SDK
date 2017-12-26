@@ -1,4 +1,9 @@
 # CHANGELOG
+### 4.2.1 - 26/12/2017
+
+[IMPROVE] Changed the design of StartView close button
+[FIX] Minor bugs fixed
+
 ### 4.2.0 - 29/10/2017
 
 [IMPROVE] StartView performance<br>
