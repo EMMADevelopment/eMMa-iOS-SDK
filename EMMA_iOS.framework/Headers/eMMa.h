@@ -605,7 +605,16 @@ For a simple configuration put this in you AppDelegate's method:
  *
  *  @param url URL  
  */
-+(void)setAPIeMMaURL:(NSString*) url;
++(void)setAPIeMMaURL:(NSString*) url __deprecated;
+
+
+/**
+ *  This method, sets the API URL for proxies
+ *  Ex: https://www.your_proxy.com/ws/
+ *
+ *  @param url URL
+ */
++(void)setWebServiceURL:(NSString*) url;
 
 /**
  * Request a new In App Message providing a custom EMMAInAppRequest
@@ -671,5 +680,13 @@ For a simple configuration put this in you AppDelegate's method:
  * @param url The deeplink url
  */
 +(void)handleLink:(NSURL*) url;
+
+
+/**
+ * Set custom powlink domains
+ *
+ * @param customDomains Array of powlink domains
+ */
++ (void) setPowlinkDomains: (NSArray<NSString*> *) customDomains;
 
 @end

@@ -18,8 +18,10 @@
 @property int queueTime;
 @property (nonatomic, strong) NSString* urlBase;
 @property (nonatomic, strong) NSDictionary* pushLaunchOptions;
+@property (nonatomic, strong) NSArray<NSString*>* customPowlinkDomains;
 @property (nonatomic, assign) id<EMMAPushDelegate> pushDelegate;
 @property (nonatomic, assign) id<UNUserNotificationCenterDelegate> pushNotificationsDelegate;
+
 
 -(id) initWithSessionKey:(NSString*) sessionKey;
 
