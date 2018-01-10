@@ -1,4 +1,10 @@
 # CHANGELOG
+### 4.2.1 - 10/01/2018
+[NEW] New feature Re-Targeting<br>
+[IMPROVE] In-app communications improves<br>
+[FIX] Fixed deeplink on DynamicTab<br>
+[FIX] Minor bugs fixes
+
 ### 4.2.1 - 26/12/2017
 
 [IMPROVE] Changed the design of StartView close button
