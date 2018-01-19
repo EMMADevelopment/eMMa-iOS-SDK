@@ -1,4 +1,7 @@
 # CHANGELOG
+### 4.2.3 - 19/01/2018
+[FIX] Fixed bug that performs multiples calls when session isn't started
+
 ### 4.2.2 - 10/01/2018
 [NEW] New feature Re-Targeting<br>
 [IMPROVE] In-app communications improves<br>
