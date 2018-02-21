@@ -1,4 +1,7 @@
 # CHANGELOG
+### 4.2.4 - 21/02/2018
+[FIX] Fixed banner in scroll screen
+
 ### 4.2.3 - 19/01/2018
 [FIX] Fixed bug that performs multiples calls when session isn't started
 
