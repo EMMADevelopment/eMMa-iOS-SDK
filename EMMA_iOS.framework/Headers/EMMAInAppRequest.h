@@ -10,8 +10,9 @@
 
 @interface EMMAInAppRequest : NSObject
 
-@property (nonatomic, strong) NSString *nativeAdTemplateId;
 @property (nonatomic, strong) NSString *label;
 @property (nonatomic, strong) NSString *inAppMessageId;
+
+@property (nonatomic, strong) NSString *nativeAdTemplateId __deprecated_msg("Use EMMANativeAdRequest instead.");
 
 @end

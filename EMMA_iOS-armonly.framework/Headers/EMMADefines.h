@@ -126,6 +126,7 @@ typedef void(^EMMAGetCouponsBlock)(NSDictionary* couponsResponse);
 -(void) onClose:(EMMACampaign*) campaign;
 @optional
 -(void) onReceived:(EMMANativeAd*) nativeAd;
+-(void) onBatchNativeAdReceived:(NSArray<EMMANativeAd*>*) nativeAds;
 @end
 
 @protocol EMMACouponDelegate <NSObject>

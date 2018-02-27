@@ -565,7 +565,6 @@ For a simple configuration put this in you AppDelegate's method:
  */
 +(void)checkReceivedNotifications:(NSDictionary *)options __deprecated;
 
-
 ///---------------------------------------------------------------------------------------
 /// @name eMMa User Info
 ///---------------------------------------------------------------------------------------
@@ -590,7 +589,6 @@ For a simple configuration put this in you AppDelegate's method:
  *  @param domain URL without the http://
  */
 +(void)setWebSDKDomain:(NSString*) domain;
-
 
 /**
  * Returns if session is started and running
@@ -623,16 +621,25 @@ For a simple configuration put this in you AppDelegate's method:
  *
  * {
  *
- * EMMAInAppRequest inAppRequest = new EMMAInAppRequest();
- * inAppRequest.setNativeAdId("dashboardAD");
+ * EMMAInAppRequest requestParams = new EMMAInAppRequest();
+ * requestParams.nativeAdTemplateId = "dashboardAD";
  *
- * EMMA.getInAppMessage(EMMACampaign.Type.NativeAd, inAppRequest);
+ * EMMA.getInAppMessage(EMMACampaign.Type.NativeAd, requestParams);
  * }
  *
  * @param type in app method type.
  * @param request in app request.
  */
 +(void)inAppMessage:(InAppType)type andRequest:(EMMAInAppRequest*) request;
+
+/**
+ * Request a new In App Message providing a custom EMMAInAppRequest and delegate method.
+ *
+ * @param type in app method type.
+ * @param request in app request.
+ * @param delegate in app delegate.
+ */
++(void)inAppMessage:(InAppType)type andRequest:(EMMAInAppRequest*) request withDelegate:(id<EMMAInAppMessageDelegate>) delegate;
 
 /**
  * Method adds delegate for inapp message requests
@@ -672,15 +679,12 @@ For a simple configuration put this in you AppDelegate's method:
  */
 +(void)sendClick:(EMMACampaignType) campaignType withId:(NSString*) campaignId;
 
-
-
 /**
  * Handle deeplink URL for internal porpuses of EMMA, e.g deeplinks with attribution campaigns
  *
  * @param url The deeplink url
  */
 +(void)handleLink:(NSURL*) url;
-
 
 /**
  * Set custom powlink domains

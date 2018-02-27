@@ -18,6 +18,7 @@ FOUNDATION_EXPORT const unsigned char EMMA_iOSVersionString[];
 #import "EMMADefines.h"
 #import "EMMA.h"
 #import "EMMAInAppRequest.h"
+#import "EMMANativeAdRequest.h"
 #import "EMMACampaign.h"
 #import "EMMANativeAd.h"
 #import "EMMACoupon.h"

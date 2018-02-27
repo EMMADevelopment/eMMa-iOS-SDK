@@ -11,11 +11,15 @@
 
 @interface EMMANativeAd : EMMACampaign
 
+
 @property BOOL openInSafari;
 @property (nonatomic, strong) NSString * nativeAdTemplateId;
 @property (nonatomic, strong) NSDictionary * nativeAdContent;
+@property (nonatomic, strong)  NSString * tag;
+
 
 -(BOOL) parseResponseInfo: (NSDictionary*) responseDict;
+
 -(NSString*) getField: (NSString *) fieldKey;
 
 @end
