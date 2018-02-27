@@ -1,4 +1,8 @@
 # CHANGELOG
+### 4.2.5 - 27/02/2018
+[NEW] Multiple Native Ad for a unique template id
+[FIX] Multiples bugs fixed
+
 ### 4.2.4 - 21/02/2018
 [FIX] Fixed banner in scroll screen
 
