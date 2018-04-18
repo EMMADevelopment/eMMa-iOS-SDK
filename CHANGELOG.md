@@ -1,4 +1,7 @@
 # CHANGELOG
+### 4.2.6 - 18/04/2018
+[IMPROVE] Changes for new AdWords API
+
 ### 4.2.5 - 27/02/2018
 [NEW] Multiple Native Ad for a unique template id
 [FIX] Multiples bugs fixed
