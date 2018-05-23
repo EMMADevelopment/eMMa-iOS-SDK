@@ -691,6 +691,24 @@ For a simple configuration put this in you AppDelegate's method:
  *
  * @param customDomains Array of powlink domains
  */
-+ (void) setPowlinkDomains: (NSArray<NSString*> *) customDomains;
++(void) setPowlinkDomains: (NSArray<NSString*> *) customDomains;
+
+
+/**
+ * This method enables communication between SDK and EMMA on previously disabled user.
+ * If already enabled, does nothing
+ */
++(void) enableUserTracking;
+
+/**
+ * This method disables all the communication between SDK and EMMA
+ * @param deleteUser If this flag is set to true deletes all user data on server. *WARNING* Can alter dashboard stats
+ */
++(void) disableUserTracking:(BOOL) deleteUser;
+
+/**
+ * Check if user tracking is enabled
+ */
++(BOOL) isUserTrackingEnabled;
 
 @end

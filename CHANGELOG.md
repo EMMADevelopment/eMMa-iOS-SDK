@@ -1,4 +1,7 @@
 # CHANGELOG
+### 4.2.7 - 23/05/2018
+[IMPROVE] GDPR adaptation.
+
 ### 4.2.6 - 18/04/2018
 [IMPROVE] Changes for new AdWords API
 
