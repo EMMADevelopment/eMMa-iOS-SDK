@@ -1,4 +1,7 @@
 # CHANGELOG
+### 4.2.8 - 24/05/2018
+[NEW] Enable/disable track screen events.
+
 ### 4.2.7 - 23/05/2018
 [IMPROVE] GDPR adaptation.
 

@@ -711,4 +711,18 @@ For a simple configuration put this in you AppDelegate's method:
  */
 +(BOOL) isUserTrackingEnabled;
 
+
+/**
+ * Clears caches and reset instance
+ */
++ (void) reset;
+
+
+/**
+ * This method enable or disable screen events. Default: YES
+ *
+ * @param trackScreenEvents if YES track screen events
+ */
++ (void) trackScreenEvents: (BOOL) trackScreenEvents;
+
 @end

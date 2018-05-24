@@ -21,6 +21,7 @@
 @property (nonatomic, strong) NSArray<NSString*>* customPowlinkDomains;
 @property (nonatomic, assign) id<EMMAPushDelegate> pushDelegate;
 @property (nonatomic, assign) id<UNUserNotificationCenterDelegate> pushNotificationsDelegate;
+@property BOOL trackScreenEvents;
 
 
 -(id) initWithSessionKey:(NSString*) sessionKey;
