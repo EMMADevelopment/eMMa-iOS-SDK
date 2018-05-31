@@ -1,4 +1,7 @@
 # CHANGELOG
+### 4.2.9 - 31/05/2018
+[NEW] Unique click retargeting (retargeting 2).
+
 ### 4.2.8 - 24/05/2018
 [NEW] Enable/disable track screen events.
 
