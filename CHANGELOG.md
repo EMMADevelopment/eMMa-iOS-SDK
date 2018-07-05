@@ -1,4 +1,8 @@
 # CHANGELOG
+### 4.2.10 - 05/05/2018
+[FIX] Native ad frecuency crash
+[FIX] Minor bugs fixed
+
 ### 4.2.9 - 31/05/2018
 [NEW] Unique click retargeting (retargeting 2).
 
