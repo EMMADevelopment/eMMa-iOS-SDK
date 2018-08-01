@@ -1,4 +1,9 @@
 # CHANGELOG
+
+### 4.2.11 - 01/08/2018
+[FIX] Banner shown time
+[NEW] Retargeting params
+
 ### 4.2.10 - 05/05/2018
 [FIX] Native ad frecuency crash
 [FIX] Minor bugs fixed
