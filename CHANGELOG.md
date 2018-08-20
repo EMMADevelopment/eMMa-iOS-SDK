@@ -1,4 +1,6 @@
 # CHANGELOG
+### 4.2.12 - 20/08/2018
+[FIX] Solved crash that occurs due to memory leak in auto events
 
 ### 4.2.11 - 01/08/2018
 [FIX] Banner shown time
