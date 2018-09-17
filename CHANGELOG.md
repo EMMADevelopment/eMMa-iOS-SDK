@@ -1,4 +1,7 @@
 # CHANGELOG
+### 4.2.13 - 17/09/2018
+[NEW] Apple Search Ads attribution
+
 ### 4.2.12 - 20/08/2018
 [FIX] Solved crash that occurs due to memory leak in auto events
 
