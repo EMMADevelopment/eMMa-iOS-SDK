@@ -10,6 +10,7 @@
 @class EMMACampaign;
 @class EMMANativeAd;
 @class EMMACoupon;
+@class EMMAInstallAttribution;
 
 
 #ifndef eMMa_EMMADefines_h
@@ -135,6 +136,11 @@ typedef void(^EMMAGetCouponsBlock)(NSDictionary* couponsResponse);
 -(void) onCouponsFailure;
 @optional
 -(void) onCouponValidRedeemsReceived:(int) validRedeems;
+@end
+
+@protocol EMMAInstallAttributionDelegate <NSObject>
+@required
+-(void) onAttributionReceived:(EMMAInstallAttribution*) attribution;
 @end
 
 #endif

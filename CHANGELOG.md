@@ -1,4 +1,10 @@
 # CHANGELOG
+### 4.3.0 - 07/11/2018
+[NEW] Support for short powlink urls
+[NEW] Support to get install attribution info
+[FIX] Location changes
+[FIX] Fixed minor bugs
+
 ### 4.2.13 - 17/09/2018
 [NEW] Apple Search Ads attribution
 

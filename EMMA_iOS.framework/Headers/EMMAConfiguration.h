@@ -19,6 +19,7 @@
 @property (nonatomic, strong) NSString* urlBase;
 @property (nonatomic, strong) NSDictionary* pushLaunchOptions;
 @property (nonatomic, strong) NSArray<NSString*>* customPowlinkDomains;
+@property (nonatomic, strong) NSArray<NSString*>* shortPowlinkDomains;
 @property (nonatomic, assign) id<EMMAPushDelegate> pushDelegate;
 @property (nonatomic, assign) id<UNUserNotificationCenterDelegate> pushNotificationsDelegate;
 @property BOOL trackScreenEvents;

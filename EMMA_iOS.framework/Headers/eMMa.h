@@ -19,6 +19,8 @@
 #import "EMMAConfiguration.h"
 
 
+
+
 @interface EMMA : NSObject
 
 ///---------------------------------------------------------------------------------------
@@ -693,6 +695,13 @@ For a simple configuration put this in you AppDelegate's method:
  */
 +(void) setPowlinkDomains: (NSArray<NSString*> *) customDomains;
 
+/**
+ * Set custom short powlink domains
+ *
+ * @param customDomains Array of powlink domains
+ */
++(void) setShortPowlinkDomains: (NSArray<NSString*> *) customDomains;
+
 
 /**
  * This method enables communication between SDK and EMMA on previously disabled user.
@@ -717,12 +726,19 @@ For a simple configuration put this in you AppDelegate's method:
  */
 + (void) reset;
 
-
 /**
  * This method enable or disable screen events. Default: YES
  *
  * @param trackScreenEvents if YES track screen events
  */
 + (void) trackScreenEvents: (BOOL) trackScreenEvents;
+
+/**
+ * This method gets the install attribution info. The response can have three status
+ * for attribution: pending, organic or campaign
+ *
+ * @param attributionDelegate delegate for response
+ */
++ (void) installAttributionInfo: (id<EMMAInstallAttributionDelegate>) attributionDelegate;
 
 @end
