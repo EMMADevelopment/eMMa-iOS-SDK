@@ -1,4 +1,7 @@
 # CHANGELOG
+### 4.3.1 - 08/11/2018
+[IMPROVE] Performance improvements on requests pool
+
 ### 4.3.0 - 07/11/2018
 [NEW] Support for short powlink urls
 [NEW] Support to get install attribution info
