@@ -15,11 +15,11 @@
 [FIX] Solved crash that occurs due to memory leak in auto events
 
 ### 4.2.11 - 01/08/2018
-[FIX] Banner shown time
+[FIX] Banner shown time <br/>
 [NEW] Retargeting params
 
 ### 4.2.10 - 05/05/2018
-[FIX] Native ad frecuency crash
+[FIX] Native ad frecuency crash <br/>
 [FIX] Minor bugs fixed
 
 ### 4.2.9 - 31/05/2018
@@ -35,7 +35,7 @@
 [IMPROVE] Changes for new AdWords API
 
 ### 4.2.5 - 27/02/2018
-[NEW] Multiple Native Ad for a unique template id
+[NEW] Multiple Native Ad for a unique template id <br/>
 [FIX] Multiples bugs fixed
 
 ### 4.2.4 - 21/02/2018
@@ -52,7 +52,7 @@
 
 ### 4.2.1 - 26/12/2017
 
-[IMPROVE] Changed the design of StartView close button
+[IMPROVE] Changed the design of StartView close button <br/>
 [FIX] Minor bugs fixed
 
 ### 4.2.0 - 29/10/2017
