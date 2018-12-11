@@ -1,5 +1,5 @@
 //
-//  eMMa.h
+//  EMMA.h
 //  eMMa_iOS_SDK
 //
 //  Created by Jaume Cornadó Panadés on 30/9/14.
@@ -11,12 +11,14 @@
 
 @class UIButton;
 @class EMMAPushSystemController;
-@class EMMAInAppRequest;
 
 @import UserNotifications;
 
 #import "EMMADefines.h"
 #import "EMMAConfiguration.h"
+#import "EMMAEventRequest.h"
+#import "EMMAInAppRequest.h"
+
 
 
 
@@ -39,11 +41,7 @@ For a simple configuration put this in you AppDelegate's method:
         // Override point for customization after application launch.
  
         [EMMA startSession:@"MYFANCYAPPKEY"];
-        [EMMA trackLocation];
-        [EMMA startPushSystem];
-        [EMMA checkForAdBall];
-        [EMMA addRateAlertForAppStoreURL:@"https://itunes.apple.com/es/app/mygreatapp"];
-
+ 
         return YES;
     }
  
@@ -117,15 +115,18 @@ For a simple configuration put this in you AppDelegate's method:
  
  This can be useful for measuring how often users perform various actions, for example. Your application is currently limited to counting occurrences for 30 different event ids.
  
-    [EMMA trackEvent:@"EVENT_TOKEN"];
+ EMMAEventRequest * eventRequest = [[EMMAEventRequest alloc] initWithToken: eventName];
+ [EMMA trackEvent:eventRequest];
  
  You can get the EVENT_TOKENS creating events on EMMA web platform, if a non-existent token is sent EMMA will return error.
  
  @param event An event token obtained from EMMA Dashboard
  */
-+(void)trackEvent:(NSString*)event;
++(void)trackEvent:(NSString*)token __attribute__((deprecated("Use trackEvent: with request object.")));
 
-+(void) trackEvent:(NSString *)event withAttributes: (NSDictionary*) attributtes;
++(void) trackEvent:(NSString *)token withAttributes: (NSDictionary*) attributtes __attribute__((deprecated("Use trackEvent: with request object.")));
+
++(void) trackEventWithRequest:(EMMAEventRequest *) request;
 
 /**
  Use setWhitelist to restrict urls that can be opened for SDK in-app communications
@@ -151,13 +152,11 @@ For a simple configuration put this in you AppDelegate's method:
  @param mail the mail of the user
  @param extras extra fields to track
  */
-+(void)loginUserID:(NSString*)userId forMail:(NSString*)mail andExtras:(NSDictionary*)extras __deprecated;
 +(void)loginUser:(NSString*)userId forMail:(NSString*)mail andExtras:(NSDictionary*)extras;
 
 /**
  Convinence method equivalent to loginUserID:forMail:andExtras: without shipping extra fields
  */
-+(void)loginUserID:(NSString*)userId forMail:(NSString*)mail __deprecated;
 +(void)loginUser:(NSString*)userId forMail:(NSString*)mail;
 
 
@@ -173,11 +172,9 @@ For a simple configuration put this in you AppDelegate's method:
  @param mail the mail of the user
  @param extras extra fields to track
  */
-+(void)registerUserID:(NSString*)userId forMail:(NSString*)mail andExtras:(NSDictionary*)extras __deprecated;
 +(void)registerUser:(NSString*)userId forMail:(NSString*)mail andExtras:(NSDictionary*)extras;
 
 /** Convinence method without extras, see: registerUserID:forMail:andExtras */
-+(void)registerUserID:(NSString*)userId forMail:(NSString*)mail __deprecated;
 +(void)registerUser:(NSString*)userId forMail:(NSString*)mail;
 
 /**
@@ -274,11 +271,6 @@ For a simple configuration put this in you AppDelegate's method:
 +(void) setStartViewParameters:(NSDictionary*) parameters;
 
 /**
-  Use checkForStartViewWithLabel in order to check if show Promotion web views added on eMMa dashboard. If you want you can pass a custom NSString that labels the StartView in case you use more than one StartViews on your app and you need to distinguish between them. NOTE: You cannot use autocreation parameter using label because labeled Startviews are attached to a specific part of the app, not at the startup.
-*/
-+(void) checkForStartViewWithLabel: (NSString*) label __deprecated;
-
-/**
  *  Closes the current StartView
  */
 +(void) closeStartView;
@@ -286,11 +278,6 @@ For a simple configuration put this in you AppDelegate's method:
 ///---------------------------------------------------------------------------------------
 /// @name eMMa AdBall
 ///---------------------------------------------------------------------------------------
-
-/**
- Use checkForAdBall in order to check if show AdBalls added on eMMa dashboard.
-*/
-+(void) checkForAdBall __deprecated;
 
 /**
  Tells if AdBall is on Screen
@@ -304,23 +291,6 @@ For a simple configuration put this in you AppDelegate's method:
 ///---------------------------------------------------------------------------------------
 
 /**
- *  Use checkForBannerOnViewcontroller in order to check if show Banner added on eMMa dashboard.
- *
- *  @param viewController the UIViewController where the banner will be seen
- *  @param onBannerBlock  It invoked when the banner is shown or not
- */
-+ (void)checkForBannerOnViewController:(UIViewController*)viewController withBlock:(EMMAOnBannerShow)onBannerBlock __deprecated;
-
-/**
- *   Use checkForBannerOnViewcontroller in order to check if show Banner added on eMMa dashboard. If you want you can pass a custom NSString that labels the Banner in case you use more than one Banner on your app and you need to distinguish between them.
- *
- *  @param viewController the UIViewController where the banner will be seen
- *  @param label          the label you assigned on eMMa for the Banner
- *  @param onBannerBlock  It invoked when the banner is shown or not
- */
-+ (void)checkForBannerOnViewcontroller:(UIViewController*)viewController withLabel:(NSString*)label andBlock:(EMMAOnBannerShow)onBannerBlock __deprecated;
-
-/**
  *  Sets the parameter to autocreate the Banner when coming from background
  *
  *  @param autoCreation if YES, it will create the Banner when coming from background automatically
@@ -332,42 +302,11 @@ For a simple configuration put this in you AppDelegate's method:
 ///---------------------------------------------------------------------------------------
 
 /**
- *  Use checkForStrip in order to check if show Strip added on eMMa dashboard.
- */
-+ (void)checkForStrip __deprecated;
-
-/**
- *  Use checkForStripWithLabel in order to check if show Strip added on eMMa dashboard. If you want you can pass a custom NSString that labels the Strip in case you use more than one Strip on your app and you need to distinguish between them.
- *
- *  @param label the label you assigned on eMMa for the Strip
- */
-+ (void)checkForStripWithLabel:(NSString*)label __deprecated;
-
-/**
  *  Sets the parameter to autocreate the Strip when coming from background
  *
  *  @param autoCreation if YES, it will create the Strip when coming from background automatically
  */
 + (void)setStripAutoCreation:(BOOL) autoCreation;
-
-
-///---------------------------------------------------------------------------------------
-/// @name eMMa Coupons
-///---------------------------------------------------------------------------------------
-
-+ (void)checkForCoupons:(EMMAGetCouponsBlock) response __deprecated;
-
-+ (void)checkForCouponsWithLabel:(NSString*)label result:(EMMAGetCouponsBlock) response __deprecated;
-
-+ (void)getCoupon:(NSInteger) couponId result:(EMMAGetCouponsBlock) response __deprecated;
-
-+ (void)redeemCoupon:(NSInteger) couponId __deprecated;
-
-+ (void)getCouponValidRedeems:(NSInteger)couponId result: (EMMAGetCouponsBlock)response __deprecated;
-
-+ (void)cancelCouponRedeem:(NSInteger)couponId count:(NSInteger)count __deprecated;
-
-+ (void)cancelCouponRedeem:(NSInteger)couponId __deprecated;
 
  
 ///---------------------------------------------------------------------------------------
@@ -379,11 +318,6 @@ For a simple configuration put this in you AppDelegate's method:
  @param tabBarController The Application UITabBarController
  */
 +(void) setPromoTabBarController:(UITabBarController*)tabBarController;
-
-/**
- *  Checks for DynamicTab on eMMa Platform
- */
-+(void) checkPromoOnTabBar __deprecated;
 
 /**
  *  Sets the index where the Dynamic Tab will be shown if it's not defined on eMMa Platform
@@ -408,13 +342,13 @@ For a simple configuration put this in you AppDelegate's method:
 
 
 ///---------------------------------------------------------------------------------------
-/// @name eMMa Rate Alert
+/// @name EMMA Rate Alert
 ///---------------------------------------------------------------------------------------
 
 /**
  Shedules an alert to rate the app
  
- eMMa makes easier to add a Rate alert in order to achieve more positive reviews app.
+ EMMA makes easier to add a Rate alert in order to achieve more positive reviews app.
  
  @param appStoreURL Your AppStore app URL.
  */
@@ -483,11 +417,11 @@ For a simple configuration put this in you AppDelegate's method:
 +(void) setRateAlertShowAfterUpdate:(BOOL) showAlert;
 
 ///---------------------------------------------------------------------------------------
-/// @name eMMa Push system
+/// @name EMMA Push system
 ///---------------------------------------------------------------------------------------
 
 /**
- eMMa allows you to add a very powerful push system easy to integrate. Also allows you send info through pushes and do whatever you want inside your app with it. You need to generate your certificates for your app to be compatible with the push system. Please refer to Appendix Push Notification Certificates.
+ EMMA allows you to add a very powerful push system easy to integrate. Also allows you send info through pushes and do whatever you want inside your app with it. You need to generate your certificates for your app to be compatible with the push system. Please refer to Appendix Push Notification Certificates.
  
  @param launchOptions pass the launch options on the appdelegate's didFinishLaunching method
  */
@@ -497,7 +431,7 @@ For a simple configuration put this in you AppDelegate's method:
  This method allows to configure the behaviour of the push system.
  
  Currently the supported options are:
- eMMaPushSystemDisableAlert -> Disables showing alert messages for new pushs received.
+ kPushSystemDisableAlert -> Disables showing alert messages for new pushs received.
  */
 +(void) setPushSystemOptions: (EMMAPushSystemOptions) options;
 
@@ -509,27 +443,21 @@ For a simple configuration put this in you AppDelegate's method:
 +(void) setPushSystemDelegate: (id<EMMAPushDelegate>)delegate;
 
 /**
- 
- 
- @param delegate Push notification delegate for iOS 10.
- */
-
-+(void) setPushNotificationsDelegate: (id<UNUserNotificationCenterDelegate>) delegate;
-/**
  iOS 10 only.
  This delegate allows receive notification with UserNotifications framework.
  
  @param delegate The delegate object
  */
 
++(void) setPushNotificationsDelegate: (id<UNUserNotificationCenterDelegate>) delegate;
+
 /**
  This method handles the remote notification payload
- 
  
  Example of implementation:
  
     - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-        [eMMa handlePush:userInfo];
+        [EMMA handlePush:userInfo];
     }
  
  @param userInfo The userInfo payload
@@ -539,11 +467,10 @@ For a simple configuration put this in you AppDelegate's method:
 /**
  This method registers a new token on eMMa servers.
  
- 
  Example of implementation:
  
     -(void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    [eMMa registerToken:deviceToken];
+        [EMMA registerToken:deviceToken];
     }
  
  @param deviceToken The token received from Apple Servers.
@@ -551,7 +478,7 @@ For a simple configuration put this in you AppDelegate's method:
 +(void)registerToken:(NSData*)deviceToken;
 
 /**
- Checks if eMMa had received any push tag in the current session
+ Checks if EMMA had received any push tag in the current session
  
     eMMaPushTagBlock definition:
  
@@ -562,13 +489,8 @@ For a simple configuration put this in you AppDelegate's method:
  */
 +(void) checkPushTag: (NSString*) pushTag withBlock: (EMMAPushTagBlock) block;
 
-/**
- This method is replaced by handlePush: and will be removed from future releases
- */
-+(void)checkReceivedNotifications:(NSDictionary *)options __deprecated;
-
 ///---------------------------------------------------------------------------------------
-/// @name eMMa User Info
+/// @name EMMA User Info
 ///---------------------------------------------------------------------------------------
 
 +(void)getUserInfo:(EMMAGetUserInfoBlock) resultBlock;
@@ -576,7 +498,7 @@ For a simple configuration put this in you AppDelegate's method:
 +(void)getUserId:(EMMAGetUserIdBlock) resultBlock;
 
 ///---------------------------------------------------------------------------------------
-/// @name eMMa Web SDK Sync
+/// @name EMMA Web SDK Sync
 ///---------------------------------------------------------------------------------------
 
 /**
@@ -603,15 +525,6 @@ For a simple configuration put this in you AppDelegate's method:
  *  This method, sets the API URL for proxies
  *  Ex: https://www.your_proxy.com/ws/
  *
- *  @param url URL  
- */
-+(void)setAPIeMMaURL:(NSString*) url __deprecated;
-
-
-/**
- *  This method, sets the API URL for proxies
- *  Ex: https://www.your_proxy.com/ws/
- *
  *  @param url URL
  */
 +(void)setWebServiceURL:(NSString*) url;
@@ -623,16 +536,26 @@ For a simple configuration put this in you AppDelegate's method:
  *
  * {
  *
- * EMMAInAppRequest requestParams = new EMMAInAppRequest();
- * requestParams.nativeAdTemplateId = "dashboardAD";
+ * EMMANativeAdRequest *requestParams =  [[EMMANativeAdRequest alloc] init];
+ * requestParams.templateId = "dashboardAD";
  *
- * EMMA.getInAppMessage(EMMACampaign.Type.NativeAd, requestParams);
+ * EMMA.getInAppMessage(requestParams);
  * }
+ * <p>
+ * Startview Example:
+ *
+ * {
+ *
+ * EMMAInAppRequest *requestParams = [[EMMAInAppRequest alloc] initWithType:Startview];
+ * EMMA.getInAppMessage(requestParams);
+ * }
+ *
  *
  * @param type in app method type.
  * @param request in app request.
  */
-+(void)inAppMessage:(InAppType)type andRequest:(EMMAInAppRequest*) request;
++(void)inAppMessage:(InAppType)type andRequest:(EMMAInAppRequest*) request
+__attribute__((deprecated("Use inAppMessage: with request object instead.")));
 
 /**
  * Request a new In App Message providing a custom EMMAInAppRequest and delegate method.
@@ -641,7 +564,12 @@ For a simple configuration put this in you AppDelegate's method:
  * @param request in app request.
  * @param delegate in app delegate.
  */
-+(void)inAppMessage:(InAppType)type andRequest:(EMMAInAppRequest*) request withDelegate:(id<EMMAInAppMessageDelegate>) delegate;
++(void)inAppMessage:(InAppType)type andRequest:(EMMAInAppRequest*) request withDelegate:(id<EMMAInAppMessageDelegate>) delegate
+__attribute__((deprecated("Use inAppMessage:withDelegate with request object instead.")));
+
++(void)inAppMessage:(EMMAInAppRequest*) request;
+
++(void)inAppMessage:(EMMAInAppRequest*) request withDelegate:(id<EMMAInAppMessageDelegate>) delegate;
 
 /**
  * Method adds delegate for inapp message requests
@@ -649,6 +577,13 @@ For a simple configuration put this in you AppDelegate's method:
  * @param delegate The delegate
  */
 +(void)addInAppDelegate:(id<EMMAInAppMessageDelegate>) delegate;
+
+/**
+ * Method removes delegate with same instance reference
+ *
+ * @param delegate The delegate
+ */
++(void) removeInAppDelegate:(id<EMMAInAppMessageDelegate>) delegate;
 
 /**
  * Method adds delegate for coupons requests
@@ -702,7 +637,6 @@ For a simple configuration put this in you AppDelegate's method:
  */
 +(void) setShortPowlinkDomains: (NSArray<NSString*> *) customDomains;
 
-
 /**
  * This method enables communication between SDK and EMMA on previously disabled user.
  * If already enabled, does nothing
@@ -719,7 +653,6 @@ For a simple configuration put this in you AppDelegate's method:
  * Check if user tracking is enabled
  */
 +(BOOL) isUserTrackingEnabled;
-
 
 /**
  * Clears caches and reset instance

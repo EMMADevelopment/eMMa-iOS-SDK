@@ -1,4 +1,7 @@
 # CHANGELOG
+### 4.4.1 - 11/12/2018
+[FIX] Native Ad request callback
+
 ### 4.4.0 - 04/12/2018
 [NEW] New listener for check request status (inapp and event) <br/>
 [IMPROVE] Changes on inapp and event requests <br/>

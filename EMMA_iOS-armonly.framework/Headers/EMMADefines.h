@@ -143,4 +143,12 @@ typedef void(^EMMAGetCouponsBlock)(NSDictionary* couponsResponse);
 -(void) onAttributionReceived:(EMMAInstallAttribution*) attribution;
 @end
 
+@protocol EMMARequestDelegate <NSObject>
+@required
+-(void) onStarted:(NSString*) id;
+-(void) onSuccess:(NSString*) id containsData:(BOOL) data;
+-(void) onFailed:(NSString*) id;
+@end
+
+
 #endif

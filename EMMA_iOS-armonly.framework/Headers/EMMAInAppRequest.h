@@ -6,13 +6,18 @@
 //  Copyright © 2017 moddity. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "EMMADefines.h"
+
+@class EMMARequestDelegate;
 
 @interface EMMAInAppRequest : NSObject
 
+@property (nonatomic, strong) NSString *customId;
 @property (nonatomic, strong) NSString *label;
 @property (nonatomic, strong) NSString *inAppMessageId;
+@property (nonatomic, strong) id<EMMARequestDelegate> requestDelegate;
 
-@property (nonatomic, strong) NSString *nativeAdTemplateId __deprecated_msg("Use EMMANativeAdRequest instead.");
+-(instancetype)initWithType:(InAppType) type;
+-(InAppType) type;
 
 @end
