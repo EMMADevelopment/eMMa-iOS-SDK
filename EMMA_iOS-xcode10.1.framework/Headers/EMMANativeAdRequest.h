@@ -1,0 +1,17 @@
+//
+//  EMMANativeAdParams.h
+//  eMMa
+//
+//  Created by Adrian Carrera on 20/2/18.
+//  Copyright © 2018 moddity. All rights reserved.
+//
+#import <Foundation/Foundation.h>
+#import "EMMAInAppRequest.h"
+
+@interface EMMANativeAdRequest: EMMAInAppRequest
+
+@property BOOL isBatch;
+@property (nonatomic, strong) NSString *templateId;
+
+@end
+
