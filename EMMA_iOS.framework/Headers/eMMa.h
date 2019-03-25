@@ -19,10 +19,6 @@
 #import "EMMAEventRequest.h"
 #import "EMMAInAppRequest.h"
 
-
-
-
-
 @interface EMMA : NSObject
 
 ///---------------------------------------------------------------------------------------
@@ -56,7 +52,7 @@ For a simple configuration put this in you AppDelegate's method:
   @param launchOptions pass the launch options on the appdelegate's didFinishLaunching method
 */
 
-+(void)startSession:(NSString*)appKey withOptions:(NSDictionary*)launchOptions;
++(void)startSession:(NSString*)appKey withOptions:(NSDictionary*)launchOptions __attribute__((deprecated("Use startSession without options")));
 
 ///---------------------------------------------------------------------------------------
 /// @name EMMA Configuration
@@ -122,11 +118,8 @@ For a simple configuration put this in you AppDelegate's method:
  
  @param event An event token obtained from EMMA Dashboard
  */
-+(void)trackEvent:(NSString*)token __attribute__((deprecated("Use trackEvent: with request object.")));
 
-+(void) trackEvent:(NSString *)token withAttributes: (NSDictionary*) attributtes __attribute__((deprecated("Use trackEvent: with request object.")));
-
-+(void) trackEventWithRequest:(EMMAEventRequest *) request;
++(void) trackEvent:(EMMAEventRequest *) request;
 
 /**
  Use setWhitelist to restrict urls that can be opened for SDK in-app communications
@@ -422,10 +415,9 @@ For a simple configuration put this in you AppDelegate's method:
 
 /**
  EMMA allows you to add a very powerful push system easy to integrate. Also allows you send info through pushes and do whatever you want inside your app with it. You need to generate your certificates for your app to be compatible with the push system. Please refer to Appendix Push Notification Certificates.
- 
- @param launchOptions pass the launch options on the appdelegate's didFinishLaunching method
- */
-+(void) startPushSystem: (NSDictionary*) launchOptions;
+  */
++(void) startPushSystem;
++(void) startPushSystem: (NSDictionary*) launchOptions __attribute__((deprecated("Use startPushSystem without parameters")));
 
 /**
  This method allows to configure the behaviour of the push system.
@@ -554,19 +546,6 @@ For a simple configuration put this in you AppDelegate's method:
  * @param type in app method type.
  * @param request in app request.
  */
-+(void)inAppMessage:(InAppType)type andRequest:(EMMAInAppRequest*) request
-__attribute__((deprecated("Use inAppMessage: with request object instead.")));
-
-/**
- * Request a new In App Message providing a custom EMMAInAppRequest and delegate method.
- *
- * @param type in app method type.
- * @param request in app request.
- * @param delegate in app delegate.
- */
-+(void)inAppMessage:(InAppType)type andRequest:(EMMAInAppRequest*) request withDelegate:(id<EMMAInAppMessageDelegate>) delegate
-__attribute__((deprecated("Use inAppMessage:withDelegate with request object instead.")));
-
 +(void)inAppMessage:(EMMAInAppRequest*) request;
 
 +(void)inAppMessage:(EMMAInAppRequest*) request withDelegate:(id<EMMAInAppMessageDelegate>) delegate;
@@ -657,14 +636,14 @@ __attribute__((deprecated("Use inAppMessage:withDelegate with request object ins
 /**
  * Clears caches and reset instance
  */
-+ (void) reset;
++(void) reset;
 
 /**
  * This method enable or disable screen events. Default: YES
  *
  * @param trackScreenEvents if YES track screen events
  */
-+ (void) trackScreenEvents: (BOOL) trackScreenEvents;
++(void) trackScreenEvents: (BOOL) trackScreenEvents;
 
 /**
  * This method gets the install attribution info. The response can have three status
@@ -672,6 +651,6 @@ __attribute__((deprecated("Use inAppMessage:withDelegate with request object ins
  *
  * @param attributionDelegate delegate for response
  */
-+ (void) installAttributionInfo: (id<EMMAInstallAttributionDelegate>) attributionDelegate;
++(void) installAttributionInfo: (id<EMMAInstallAttributionDelegate>) attributionDelegate;
 
 @end

@@ -1,4 +1,10 @@
 # CHANGELOG
+### 4.5.0 - 25/03/2019
+[IMPROVE] improves in push notifications <br/>
+[FIX] Fixed problem in Short url attribution <br/>
+[FIX] Fixed redimension problem in animated gifs for banner <br/>
+[FIX] Minor bugs
+
 ### 4.4.1 - 11/12/2018
 [FIX] Native Ad request callback
 
