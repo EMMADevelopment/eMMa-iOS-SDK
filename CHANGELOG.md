@@ -1,4 +1,8 @@
 # CHANGELOG
+### 4.5.1 - 31/05/2019
+[NEW] New method to start session in background <br/>
+[FIX] Fixed the bug that caused the button to appear on startviews that could not be closed <br/>
+[FIX] Minor bugs fixed
 ### 4.5.0 - 25/03/2019
 [IMPROVE] improves in push notifications <br/>
 [FIX] Fixed problem in Short Url Attribution <br/>

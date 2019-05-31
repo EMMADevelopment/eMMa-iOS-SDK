@@ -59,6 +59,12 @@ For a simple configuration put this in you AppDelegate's method:
 ///---------------------------------------------------------------------------------------
 +(void)startSessionWithConfiguration:(EMMAConfiguration*) configuration;
 
+/**
+ Starts the session in background
+ @param configuration EMMA configuration
+ */
++(void) startSessionBackground:(EMMAConfiguration *)configuration;
+
 /** Gets the current SDK Version */
 +(NSString*)getSDKVersion;
 
