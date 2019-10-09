@@ -116,7 +116,7 @@ typedef void(^EMMAGetCouponsBlock)(NSDictionary* couponsResponse);
  *
  *  @param url the url loaded in StartView
  */
--(void) openedURLFromStartView:(NSURL*) url;
+-(void) onPresented;
 
 @end
 
