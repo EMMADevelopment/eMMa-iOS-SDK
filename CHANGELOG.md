@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 4.6.0 - 27/02/2020
+
+[NEW] Params for campaigns in EMMAInAppMessageDelegate <br/>
+[FIX] Startview button sometimes not close.
+[FIX] Minor bugs.
+
+
 ## 4.5.2 - 09/10/2019
 
 #### Important update for iOS 13 support. Changes in the method of getting push tokens.

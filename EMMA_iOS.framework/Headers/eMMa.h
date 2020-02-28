@@ -475,18 +475,6 @@ For a simple configuration put this in you AppDelegate's method:
  */
 +(void)registerToken:(NSData*)deviceToken;
 
-/**
- Checks if EMMA had received any push tag in the current session
- 
-    eMMaPushTagBlock definition:
- 
-    typedef void(^eMMaPushTagBlock)(NSString* pushTag, NSString* pushTagID);
- 
- @param pushTag the pattern of the pushtag to be checked
- @param block the block to be executed on pushtag received
- */
-+(void) checkPushTag: (NSString*) pushTag withBlock: (EMMAPushTagBlock) block;
-
 ///---------------------------------------------------------------------------------------
 /// @name EMMA User Info
 ///---------------------------------------------------------------------------------------
