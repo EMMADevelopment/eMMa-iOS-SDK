@@ -3,7 +3,7 @@
 ## 4.6.0 - 27/02/2020
 
 [NEW] Params for campaigns in EMMAInAppMessageDelegate <br/>
-[FIX] Startview button sometimes not close.
+[FIX] Startview button sometimes not close. <br/>
 [FIX] Minor bugs.
 
 
