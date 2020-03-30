@@ -14,8 +14,8 @@
 @class EMMAPush;
 
 
-#ifndef eMMa_EMMADefines_h
-#define eMMa_EMMADefines_h
+#ifndef EMMADefines_h
+#define EMMADefines_h
 
 typedef void(^imageCompletionBlock)(UIImage *image);
 

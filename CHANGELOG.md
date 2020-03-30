@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 4.6.1 - 30/03/2020
+[FIX] Fixed the error that caused the device info not to be saved
+
 ## 4.6.0 - 27/02/2020
 
 [NEW] Params for campaigns in EMMAInAppMessageDelegate <br/>
