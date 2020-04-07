@@ -647,4 +647,20 @@ For a simple configuration put this in you AppDelegate's method:
  */
 +(void) installAttributionInfo: (id<EMMAInstallAttributionDelegate>) attributionDelegate;
 
+/**
+ * This method returns if push notification is from EMMA.
+ *
+ * @param content notification content
+ */
++(BOOL) isEMMAPushNotification:(UNNotificationContent*) content API_AVAILABLE(ios(10.0));
+
+/**
+* This method process notification to show a image, gif or video.
+*
+* @param requet notification request
+* @param content notificatio content
+* @param completion callback
+*/
++(void)didReceiveNotificationRequest:(UNNotificationRequest *)request withNotificationContent:(UNMutableNotificationContent *)content AndCompletionHandler:(void (^)(UNNotificationContent *)) completion;
+
 @end

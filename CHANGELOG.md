@@ -1,4 +1,7 @@
 # CHANGELOG
+## 4.6.2 - 07/04/2020
+[NEW] Click params for install attribution campaigns <br/>
+[FIX] Minor bugs
 
 ## 4.6.1 - 30/03/2020
 [FIX] Fixed the error that caused the device info not to be saved
