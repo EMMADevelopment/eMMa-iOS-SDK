@@ -1,4 +1,7 @@
 # CHANGELOG
+## 4.6.3 - 28/05/2020
+[FIX] Fixed campaign params in rules
+
 ## 4.6.2 - 07/04/2020
 [NEW] Click params for install attribution campaigns <br/>
 [FIX] Minor bugs
