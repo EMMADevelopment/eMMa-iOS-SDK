@@ -1,12 +1,20 @@
 # CHANGELOG
+
+## 4.6.4 - 01/07/2020
+
+[NEW] New method to obtain deviceId
+
 ## 4.6.3 - 28/05/2020
+
 [FIX] Fixed campaign params in rules
 
 ## 4.6.2 - 07/04/2020
+
 [NEW] Click params for install attribution campaigns <br/>
 [FIX] Minor bugs
 
 ## 4.6.1 - 30/03/2020
+
 [FIX] Fixed the error that caused the device info not to be saved
 
 ## 4.6.0 - 27/02/2020
@@ -14,7 +22,6 @@
 [NEW] Params for campaigns in EMMAInAppMessageDelegate <br/>
 [FIX] Startview button sometimes not close <br/>
 [FIX] Minor bugs
-
 
 ## 4.5.2 - 09/10/2019
 
