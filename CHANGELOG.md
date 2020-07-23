@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.6.5 - 23/07/2020
+
+[IMPROVE] Inapp delegate callbacks are saved by instance.
+
 ## 4.6.4 - 01/07/2020
 
 [NEW] New method to obtain deviceId
