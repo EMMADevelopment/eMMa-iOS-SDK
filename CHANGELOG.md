@@ -1,4 +1,9 @@
 # CHANGELOG
+## 4.6.7 - 11/09/2020
+[FIX] Fixed crash tracking some screens with auto event
+
+## 4.6.6 - 23/07/2020
+[FIX] This version fixes a crash introduced in 4.6.5
 
 ## 4.6.5 - 23/07/2020
 
