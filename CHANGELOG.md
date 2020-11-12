@@ -1,8 +1,18 @@
 # CHANGELOG
+
+## 4.8.0 - 12/11/2020
+
+[IMPROVE] Changes on device ids management <br/>
+[NEW] Method to request IDFA (iOS 14) <br/>
+[NEW] New method to update customer id without login or register user <br/>
+[FIX] Fixed minor bugs and improves
+
 ## 4.6.7 - 11/09/2020
+
 [FIX] Fixed crash tracking some screens with auto event
 
 ## 4.6.6 - 23/07/2020
+
 [FIX] This version fixes a crash introduced in 4.6.5
 
 ## 4.6.5 - 23/07/2020
