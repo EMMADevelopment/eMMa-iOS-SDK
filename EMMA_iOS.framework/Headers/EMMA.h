@@ -19,10 +19,14 @@
 #import "EMMAEventRequest.h"
 #import "EMMAInAppRequest.h"
 
+
+/**
+ Main EMMA Interface
+ */
 @interface EMMA : NSObject
 
 ///---------------------------------------------------------------------------------------
-/// @name eMMa Initialization
+/// @name EMMA Initialization
 ///---------------------------------------------------------------------------------------
 
 /**
@@ -45,31 +49,40 @@ For a simple configuration put this in you AppDelegate's method:
 */
 +(void)startSession:(NSString*)appKey;
 
-/*
- Starts the session with our servers. 
+/**
+ Starts EMMA session
  
-  @param appKey You app key
-  @param launchOptions pass the launch options on the appdelegate's didFinishLaunching method
-*/
-
-+(void)startSession:(NSString*)appKey withOptions:(NSDictionary*)launchOptions __attribute__((deprecated("Use startSession without options")));
-
-///---------------------------------------------------------------------------------------
-/// @name EMMA Configuration
-///---------------------------------------------------------------------------------------
+ This method allows fine tunning with EMMAConfiguration object
+ 
+ @param configuration Your config options
+ */
 +(void)startSessionWithConfiguration:(EMMAConfiguration*) configuration;
 
 /**
  Starts the session in background
+ 
+ This method is useful if you don't want a full session when starting app on background
+ 
  @param configuration EMMA configuration
  */
-+(void) startSessionBackground:(EMMAConfiguration *)configuration;
++(void)startSessionBackground:(EMMAConfiguration *)configuration;
+
+/**
+ * Returns if session is started and running
+ *
+ * @return true if started
+ */
++(BOOL)isSessionStarted;
+
+///---------------------------------------------------------------------------------------
+/// @name Configuration and tunning
+///---------------------------------------------------------------------------------------
 
 /** Gets the current SDK Version */
 +(NSString*)getSDKVersion;
 
 /** Gets the current SDK Build */
-+(int) getSDKBuildVersion;
++(int)getSDKBuildVersion;
 
 /**
  If you need to see the EMMA log, enable it (before startSession)
@@ -79,6 +92,38 @@ For a simple configuration put this in you AppDelegate's method:
 +(void)setDebuggerOutput:(BOOL)visible;
 
 /**
+ Configures EMMA Root View Controller. Useful on complex implementations.
+ 
+ By default EMMA use main window rootViewController.
+ If this VC is an UINavigationController uses the first VC of the stack as the rootViewController.
+ */
++(void)setRootViewController:(UIViewController*)viewController;
+
+/**
+ *  This method, sets the API URL for proxies
+ *  Ex: https://www.your_proxy.com/ws/
+ *
+ *  @param url URL
+ */
++(void)setWebServiceURL:(NSString*) url;
+
+/**
+ * Clears caches and reset instance
+ */
++(void) reset;
+
+/**
+ * This method enable or disable screen events. Default: YES
+ *
+ * @param trackScreenEvents if YES track screen events
+ */
++(void)trackScreenEvents: (BOOL) trackScreenEvents;
+
+///---------------------------------------------------------------------------------------
+/// @name User tracking and profile
+///---------------------------------------------------------------------------------------
+
+/**
  Enables EMMA to use the location of the user
  
  This method requieres NSLocationWhenInUseUsageDescription key defined into Info.plist file. If this key is not defined no location tracking will be enabled.
@@ -86,18 +131,260 @@ For a simple configuration put this in you AppDelegate's method:
 +(void)trackLocation;
 
 /**
- Configures EMMA Root View Controller. Useful to complex implementations
- 
- By default EMMA uses the main window rootViewController.
- If this VC is an UINavigationController uses the first VC of the stack as the rootViewController.
+ * This method enables communication between SDK and EMMA on previously disabled user.
+ * If already enabled, does nothing
  */
-+(void)setRootViewController:(UIViewController*)viewController;
++(void)enableUserTracking;
 
-/** 
- * @name Tracking User Behaviour
- * 
- * With EMMA you can track everything. Here you’ll find the methods that allow tracking custom event that happens on your application and also log all page views.
+/**
+ * This method disables all the communication between SDK and EMMA
+ * @param deleteUser If this flag is set to true deletes all user data on server. *WARNING* Can alter dashboard stats
  */
++(void)disableUserTracking:(BOOL) deleteUser;
+
+/**
+ * Check if user tracking is enabled
+ */
++(BOOL)isUserTrackingEnabled;
+
+/**
+ Retrieve user profile stored on emma. Useful to get attribution info at runtime
+ 
+ @param resultBlock Async callback with user information
+ */
++(void)getUserInfo:(EMMAGetUserInfoBlock) resultBlock;
+
+/**
+ Retrieve emma id associated to this device
+ 
+ @param resultBlock Async callback with user id information
+ */
++(void)getUserId:(EMMAGetUserIdBlock) resultBlock;
+
+/**
+*   This method returns the id associate with device.
+*   @return  device identifier
+*/
++(NSString*) deviceId;
+
+/**
+ Request IDFA Tracking for iOS 14 and over
+ */
++(void)requestTrackingWithIdfa API_AVAILABLE(ios(14.0));
+
+/**
+ This method associates the user with the device.
+  @param customerId The customer Id
+ */
++(void)setCustomerId: (NSString*) customerId;
+
+///---------------------------------------------------------------------------------------
+/// @name Aquisition
+///---------------------------------------------------------------------------------------
+
+/**
+ * Handle deeplink URL for internal porpuses of EMMA, e.g deeplinks with attribution campaigns
+ *
+ * @param url The deeplink url
+ */
++(void)handleLink:(NSURL*) url;
+
+/**
+ * Set custom powlink domains
+ *
+ * @param customDomains Array of powlink domains
+ */
++(void)setPowlinkDomains: (NSArray<NSString*> *) customDomains;
+
+/**
+ * Set custom short powlink domains
+ *
+ * @param customDomains Array of powlink domains
+ */
++(void)setShortPowlinkDomains: (NSArray<NSString*> *) customDomains;
+
+/**
+ * This method gets the install attribution info. The response can have three status
+ * for attribution: pending, organic or campaign
+ *
+ * @param attributionDelegate delegate for response
+ */
++(void)installAttributionInfo: (id<EMMAInstallAttributionDelegate>) attributionDelegate;
+
+///---------------------------------------------------------------------------------------
+/// @name In-App Messaging
+///---------------------------------------------------------------------------------------
+
+/**
+ * Request a new In App Message providing a custom EMMAInAppRequest
+ * <p>
+ * NativeAd Example:
+ *
+ * {
+ *
+ * EMMANativeAdRequest *requestParams =  [[EMMANativeAdRequest alloc] init];
+ * requestParams.templateId = "dashboardAD";
+ *
+ * EMMA.getInAppMessage(requestParams);
+ * }
+ * <p>
+ * Startview Example:
+ *
+ * {
+ *
+ * EMMAInAppRequest *requestParams = [[EMMAInAppRequest alloc] initWithType:Startview];
+ * EMMA.getInAppMessage(requestParams);
+ * }
+ *
+ *
+ * @param type in app method type.
+ * @param request in app request.
+ */
++(void)inAppMessage:(EMMAInAppRequest*) request;
+
++(void)inAppMessage:(EMMAInAppRequest*) request withDelegate:(id<EMMAInAppMessageDelegate>) delegate;
+
+/**
+ * Method adds delegate for inapp message requests
+ *
+ * @param delegate The delegate
+ */
++(void)addInAppDelegate:(id<EMMAInAppMessageDelegate>) delegate;
+
+/**
+ * Method removes delegate with same instance reference
+ *
+ * @param delegate The delegate
+ */
++(void)removeInAppDelegate:(id<EMMAInAppMessageDelegate>) delegate;
+
+/**
+ * Method adds delegate for coupons requests
+ *
+ * @param delegate The delegate
+ */
++(void)addCouponDelegate:(id<EMMACouponDelegate>) delegate;
+
+/**
+ * Method opens the native ad on browser or inapp webview whatever
+ * EMMA dashboard configuration
+ *
+ * @param nativeAdCampaignId The campaign identifier
+ */
++(void)openNativeAd:(NSString *) nativeAdCampaignId;
+
+/**
+ * Method sends impression event for specific campaign
+ *
+ * @param campaignType The type of campaign
+ * @param campaignId The campaign identifier
+ */
++(void)sendImpression:(EMMACampaignType) campaignType withId:(NSString*) campaignId;
+
+/**
+ * Method sends click event for specific campaign
+ *
+ * @param campaignType The type of campaign
+ * @param campaignId The campaign identifier
+ */
++(void)sendClick:(EMMACampaignType) campaignType withId:(NSString*) campaignId;
+
+/**
+ Sets the current startView options
+ 
+ Options:
+    EMMAStartViewManualCall -> Sets the startView in manual mode. Useful for using startviews with labels.
+                                Also disables check for startview returning from background
+ 
+ @param options all the options for the startview
+ */
++(void)setStartViewOptions: (EMMAStartViewOptions) options;
+
+/**
+ *  Sets the delegate for the StartView actions. This will be called when the user interacts with the StartView
+ *
+ *  @param delegate delegate
+ */
++(void)setStartViewDelegate:(id<EMMAStartViewDelegate>) delegate;
+
+
+/**
+ *  If you want you can pass a NSDictionary of parameters (key-value pair) that will append to the URL as a GET parameters. This is useful in case that you need to pass some data from the app to a StartView with a landing page.
+ *
+ *  @param parameters NSDictionary of parameters
+ */
++(void)setStartViewParameters:(NSDictionary*) parameters;
+
+/**
+ *  Closes the current StartView
+ */
++(void)closeStartView;
+
+/**
+ Tells if AdBall is on Screen
+ 
+ @return BOOL true if is on screen
+ */
++(BOOL)isAdBallShowing;
+
+/**
+ *  Sets the parameter to autocreate the Banner when coming from background
+ *
+ *  @param autoCreation if YES, it will create the Banner when coming from background automatically
+ */
++(void)setBannerAutoCreation:(BOOL) autoCreation;
+
+/**
+ *  Sets the parameter to autocreate the Strip when coming from background
+ *
+ *  @param autoCreation if YES, it will create the Strip when coming from background automatically
+ */
++ (void)setStripAutoCreation:(BOOL) autoCreation;
+
+/**
+ Sets the UITabBarController where the DynamicTab will be shown. If no UITabBarController is defined, application won't execute
+ 
+ @param tabBarController The Application UITabBarController
+ */
++(void)setPromoTabBarController:(UITabBarController*)tabBarController;
+
+/**
+ *  Sets the index where the Dynamic Tab will be shown if it's not defined on eMMa Platform
+ *
+ *  @param index position where to show the DynamicTab
+ */
++(void)setPromoTabBarIndex:(NSInteger) index;
+
+/**
+ *  Sets the UITabBarItem to show if it's not defined on eMMa Platform
+ *
+ *  @param tabBarItem the tabBarItem to show
+ */
++(void)setPromoTabBarItem:(UITabBarItem*) tabBarItem;
+
+/**
+ *  Sets the parameter to autocreate the TabBar when coming from background
+ *
+ *  @param autoCreation if YES, it will create the DynamicTab when coming from background automatically
+ */
++(void)setPromoTabBarAutoCreation:(BOOL) autoCreation;
+
+/**
+ Use setWhitelist to restrict urls that can be opened for SDK in-app communications
+ By default all urls are permited.
+ 
+ Only URLs that starts by an url in the whitelist are opened
+ */
++(void)setWhitelist:(NSArray*)urls;
+
+/*
+ Recovery the urls added in whitelist
+*/
++(NSArray*)whitelist;
+
+///---------------------------------------------------------------------------------------
+/// @name Custom Events
+///---------------------------------------------------------------------------------------
 
 /**
  Use trackEvent to count the number of times certain events happen during a session of your application.
@@ -112,23 +399,10 @@ For a simple configuration put this in you AppDelegate's method:
  @param event An event token obtained from EMMA Dashboard
  */
 
-+(void) trackEvent:(EMMAEventRequest *) request;
-
-/**
- Use setWhitelist to restrict urls that can be opened for SDK in-app communications
- By default all urls are permited.
- 
- Only URLs that starts by an url in the whitelist are opened
- */
-+(void)setWhitelist:(NSArray*)urls;
-
-/* 
- Recovery the urls added in whitelist
-*/
-+(NSArray*)whitelist;
++(void)trackEvent:(EMMAEventRequest *) request;
 
 ///---------------------------------------------------------------------------------------
-/// @name EMMA User Stats
+/// @name Default Events
 ///---------------------------------------------------------------------------------------
 
 /**
@@ -144,7 +418,6 @@ For a simple configuration put this in you AppDelegate's method:
  Convinence method equivalent to loginUserID:forMail:andExtras: without shipping extra fields
  */
 +(void)loginUser:(NSString*)userId forMail:(NSString*)mail;
-
 
 /**
  Log the user with the default data
@@ -176,7 +449,7 @@ For a simple configuration put this in you AppDelegate's method:
 +(void)trackExtraUserInfo:(NSDictionary*)info;
 
 ///---------------------------------------------------------------------------------------
-/// @name Tracking Purchase for mCommerce
+/// @name Purchases
 ///---------------------------------------------------------------------------------------
 
 /**
@@ -227,107 +500,6 @@ For a simple configuration put this in you AppDelegate's method:
 +(void)cancelOrder:(NSString*)orderId;
 
 ///---------------------------------------------------------------------------------------
-/// @name EMMA Start View
-///---------------------------------------------------------------------------------------
-
-/**
- Sets the current startView options
- 
- Options:
-    EMMAStartViewManualCall -> Sets the startView in manual mode. Useful for using startviews with labels.
-                                Also disables check for startview returning from background
- 
- @param options all the options for the startview
- */
-+(void) setStartViewOptions: (EMMAStartViewOptions) options;
-
-/**
- *  Sets the delegate for the StartView actions. This will be called when the user interacts with the StartView
- *
- *  @param delegate delegate
- */
-+(void) setStartViewDelegate:(id<EMMAStartViewDelegate>) delegate;
-
-
-/**
- *  If you want you can pass a NSDictionary of parameters (key-value pair) that will append to the URL as a GET parameters. This is useful in case that you need to pass some data from the app to a StartView with a landing page.
- *
- *  @param parameters NSDictionary of parameters
- */
-+(void) setStartViewParameters:(NSDictionary*) parameters;
-
-/**
- *  Closes the current StartView
- */
-+(void) closeStartView;
-
-///---------------------------------------------------------------------------------------
-/// @name eMMa AdBall
-///---------------------------------------------------------------------------------------
-
-/**
- Tells if AdBall is on Screen
- 
- @return BOOL true if is on screen
- */
-+(BOOL) isAdBallShowing;
-
-///---------------------------------------------------------------------------------------
-/// @name eMMa Banner
-///---------------------------------------------------------------------------------------
-
-/**
- *  Sets the parameter to autocreate the Banner when coming from background
- *
- *  @param autoCreation if YES, it will create the Banner when coming from background automatically
- */
-+(void) setBannerAutoCreation:(BOOL) autoCreation;
-
-///---------------------------------------------------------------------------------------
-/// @name eMMa Strip
-///---------------------------------------------------------------------------------------
-
-/**
- *  Sets the parameter to autocreate the Strip when coming from background
- *
- *  @param autoCreation if YES, it will create the Strip when coming from background automatically
- */
-+ (void)setStripAutoCreation:(BOOL) autoCreation;
-
- 
-///---------------------------------------------------------------------------------------
-/// @name eMMa Tab Bar View
-///---------------------------------------------------------------------------------------
-/**
- Sets the UITabBarController where the DynamicTab will be shown. If no UITabBarController is defined, application won't execute
- 
- @param tabBarController The Application UITabBarController
- */
-+(void) setPromoTabBarController:(UITabBarController*)tabBarController;
-
-/**
- *  Sets the index where the Dynamic Tab will be shown if it's not defined on eMMa Platform
- *
- *  @param index position where to show the DynamicTab
- */
-+(void) setPromoTabBarIndex:(NSInteger) index;
-
-/**
- *  Sets the UITabBarItem to show if it's not defined on eMMa Platform
- *
- *  @param tabBarItem the tabBarItem to show
- */
-+(void) setPromoTabBarItem:(UITabBarItem*) tabBarItem;
-
-/**
- *  Sets the parameter to autocreate the TabBar when coming from background
- *
- *  @param autoCreation if YES, it will create the DynamicTab when coming from background automatically
- */
-+(void) setPromoTabBarAutoCreation:(BOOL) autoCreation;
-
-
-///---------------------------------------------------------------------------------------
 /// @name EMMA Rate Alert
 ///---------------------------------------------------------------------------------------
 
@@ -347,7 +519,7 @@ For a simple configuration put this in you AppDelegate's method:
  
  @param hours  Int specifying hours between alert shows.
  */
-+(void) setRateAlertFreq: (int) hours;
++(void)setRateAlertFreq: (int) hours;
 
 /**
  Configures the alert title.
@@ -356,7 +528,7 @@ For a simple configuration put this in you AppDelegate's method:
  
  @param title The alert title
  */
-+(void) setRateAlertTitle: (NSString*) title;
++(void)setRateAlertTitle: (NSString*) title;
 
 /**
  Configures the alert message
@@ -365,7 +537,7 @@ For a simple configuration put this in you AppDelegate's method:
  
  @param message The alert message
  */
-+(void) setRateAlertMessage: (NSString*) message;
++(void)setRateAlertMessage: (NSString*) message;
 
 /**
  Sets the cancel button caption
@@ -374,7 +546,7 @@ For a simple configuration put this in you AppDelegate's method:
  
  @param cancelButtonText The cancel caption
  */
-+(void) setRateAlertCancelButton: (NSString*) cancelButtonText;
++(void)setRateAlertCancelButton: (NSString*) cancelButtonText;
 
 /**
  Sets the Rate Button caption
@@ -383,7 +555,7 @@ For a simple configuration put this in you AppDelegate's method:
  
  @param rateItButtonText the rate button caption
  */
-+(void) setRateAlertRateItButton: (NSString*) rateItButtonText;
++(void)setRateAlertRateItButton: (NSString*) rateItButtonText;
 
 /**
  Sets the Later button caption
@@ -392,7 +564,7 @@ For a simple configuration put this in you AppDelegate's method:
  
  @param laterButtonText Later button caption
  */
-+(void) setRateAlertLaterButton: (NSString*) laterButtonText;
++(void)setRateAlertLaterButton: (NSString*) laterButtonText;
 
 /**
  *  Sets if the Alert must be shown after an App Update
@@ -400,17 +572,16 @@ For a simple configuration put this in you AppDelegate's method:
  *
  *  @param showAlert BOOL
  */
-+(void) setRateAlertShowAfterUpdate:(BOOL) showAlert;
++(void)setRateAlertShowAfterUpdate:(BOOL) showAlert;
 
 ///---------------------------------------------------------------------------------------
-/// @name EMMA Push system
+/// @name Push System
 ///---------------------------------------------------------------------------------------
 
 /**
  EMMA allows you to add a very powerful push system easy to integrate. Also allows you send info through pushes and do whatever you want inside your app with it. You need to generate your certificates for your app to be compatible with the push system. Please refer to Appendix Push Notification Certificates.
   */
-+(void) startPushSystem;
-+(void) startPushSystem: (NSDictionary*) launchOptions __attribute__((deprecated("Use startPushSystem without parameters")));
++(void)startPushSystem;
 
 /**
  This method allows to configure the behaviour of the push system.
@@ -418,23 +589,23 @@ For a simple configuration put this in you AppDelegate's method:
  Currently the supported options are:
  kPushSystemDisableAlert -> Disables showing alert messages for new pushs received.
  */
-+(void) setPushSystemOptions: (EMMAPushSystemOptions) options;
++(void)setPushSystemOptions: (EMMAPushSystemOptions) options;
 
 /**
  Configures the delegate for push handling
  
  @param delegate The delegate object
  */
-+(void) setPushSystemDelegate: (id<EMMAPushDelegate>)delegate;
++(void)setPushSystemDelegate: (id<EMMAPushDelegate>)delegate;
 
 /**
- iOS 10 only.
+ > iOS 10 only.
  This delegate allows receive notification with UserNotifications framework.
  
  @param delegate The delegate object
  */
 
-+(void) setPushNotificationsDelegate: (id<UNUserNotificationCenterDelegate>) delegate;
++(void)setPushNotificationsDelegate: (id<UNUserNotificationCenterDelegate>) delegate;
 
 /**
  This method handles the remote notification payload
@@ -447,7 +618,7 @@ For a simple configuration put this in you AppDelegate's method:
  
  @param userInfo The userInfo payload
  */
-+(void) handlePush: (NSDictionary*) userInfo;
++(void)handlePush: (NSDictionary*) userInfo;
 
 /**
  This method registers a new token on eMMa servers.
@@ -462,13 +633,21 @@ For a simple configuration put this in you AppDelegate's method:
  */
 +(void)registerToken:(NSData*)deviceToken;
 
-///---------------------------------------------------------------------------------------
-/// @name EMMA User Info
-///---------------------------------------------------------------------------------------
+/**
+ * This method returns if push notification is from EMMA.
+ *
+ * @param content notification content
+ */
++(BOOL)isEMMAPushNotification:(UNNotificationContent*) content API_AVAILABLE(ios(10.0));
 
-+(void)getUserInfo:(EMMAGetUserInfoBlock) resultBlock;
-
-+(void)getUserId:(EMMAGetUserIdBlock) resultBlock;
+/**
+* This method process notification to show a image, gif or video.
+*
+* @param requet notification request
+* @param content notificatio content
+* @param completion callback
+*/
++(void)didReceiveNotificationRequest:(UNNotificationRequest *)request withNotificationContent:(UNMutableNotificationContent *)content AndCompletionHandler:(void (^)(UNNotificationContent *)) completion;
 
 ///---------------------------------------------------------------------------------------
 /// @name EMMA Web SDK Sync
@@ -487,186 +666,19 @@ For a simple configuration put this in you AppDelegate's method:
  */
 +(void)setWebSDKDomain:(NSString*) domain;
 
-/**
- * Returns if session is started and running
- *
- * @return true if started
- */
-+(BOOL) isSessionStarted;
+///---------------------------------------------------------------------------------------
+/// @name Deprecated Methods
+///---------------------------------------------------------------------------------------
 
-/**
- *  This method, sets the API URL for proxies
- *  Ex: https://www.your_proxy.com/ws/
- *
- *  @param url URL
- */
-+(void)setWebServiceURL:(NSString*) url;
-
-/**
- * Request a new In App Message providing a custom EMMAInAppRequest
- * <p>
- * NativeAd Example:
- *
- * {
- *
- * EMMANativeAdRequest *requestParams =  [[EMMANativeAdRequest alloc] init];
- * requestParams.templateId = "dashboardAD";
- *
- * EMMA.getInAppMessage(requestParams);
- * }
- * <p>
- * Startview Example:
- *
- * {
- *
- * EMMAInAppRequest *requestParams = [[EMMAInAppRequest alloc] initWithType:Startview];
- * EMMA.getInAppMessage(requestParams);
- * }
- *
- *
- * @param type in app method type.
- * @param request in app request.
- */
-+(void)inAppMessage:(EMMAInAppRequest*) request;
-
-+(void)inAppMessage:(EMMAInAppRequest*) request withDelegate:(id<EMMAInAppMessageDelegate>) delegate;
-
-/**
- * Method adds delegate for inapp message requests
- *
- * @param delegate The delegate
- */
-+(void)addInAppDelegate:(id<EMMAInAppMessageDelegate>) delegate;
-
-/**
- * Method removes delegate with same instance reference
- *
- * @param delegate The delegate
- */
-+(void) removeInAppDelegate:(id<EMMAInAppMessageDelegate>) delegate;
-
-/**
- * Method adds delegate for coupons requests
- *
- * @param delegate The delegate
- */
-+(void)addCouponDelegate:(id<EMMACouponDelegate>) delegate;
-
-/**
- * Method opens the native ad on browser or inapp webview whatever 
- * EMMA dashboard configuration
- *
- * @param nativeAdCampaignId The campaign identifier
- */
-+(void)openNativeAd:(NSString *) nativeAdCampaignId;
-
-/**
- * Method sends impression event for specific campaign
- * 
- * @param campaignType The type of campaign
- * @param campaignId The campaign identifier
- */
-+(void)sendImpression:(EMMACampaignType) campaignType withId:(NSString*) campaignId;
-
-/**
- * Method sends click event for specific campaign
- *
- * @param campaignType The type of campaign
- * @param campaignId The campaign identifier
- */
-+(void)sendClick:(EMMACampaignType) campaignType withId:(NSString*) campaignId;
-
-/**
- * Handle deeplink URL for internal porpuses of EMMA, e.g deeplinks with attribution campaigns
- *
- * @param url The deeplink url
- */
-+(void)handleLink:(NSURL*) url;
-
-/**
- * Set custom powlink domains
- *
- * @param customDomains Array of powlink domains
- */
-+(void) setPowlinkDomains: (NSArray<NSString*> *) customDomains;
-
-/**
- * Set custom short powlink domains
- *
- * @param customDomains Array of powlink domains
- */
-+(void) setShortPowlinkDomains: (NSArray<NSString*> *) customDomains;
-
-/**
- * This method enables communication between SDK and EMMA on previously disabled user.
- * If already enabled, does nothing
- */
-+(void) enableUserTracking;
-
-/**
- * This method disables all the communication between SDK and EMMA
- * @param deleteUser If this flag is set to true deletes all user data on server. *WARNING* Can alter dashboard stats
- */
-+(void) disableUserTracking:(BOOL) deleteUser;
-
-/**
- * Check if user tracking is enabled
- */
-+(BOOL) isUserTrackingEnabled;
-
-/**
- * Clears caches and reset instance
- */
-+(void) reset;
-
-/**
- * This method enable or disable screen events. Default: YES
- *
- * @param trackScreenEvents if YES track screen events
- */
-+(void) trackScreenEvents: (BOOL) trackScreenEvents;
-
-/**
- * This method gets the install attribution info. The response can have three status
- * for attribution: pending, organic or campaign
- *
- * @param attributionDelegate delegate for response
- */
-+(void) installAttributionInfo: (id<EMMAInstallAttributionDelegate>) attributionDelegate;
-
-/**
- * This method returns if push notification is from EMMA.
- *
- * @param content notification content
- */
-+(BOOL) isEMMAPushNotification:(UNNotificationContent*) content API_AVAILABLE(ios(10.0));
-
-/**
-* This method process notification to show a image, gif or video.
-*
-* @param requet notification request
-* @param content notificatio content
-* @param completion callback
+/*
+ Starts the session with our servers.
+ 
+  @param appKey You app key
+  @param launchOptions pass the launch options on the appdelegate's didFinishLaunching method
 */
-+(void)didReceiveNotificationRequest:(UNNotificationRequest *)request withNotificationContent:(UNMutableNotificationContent *)content AndCompletionHandler:(void (^)(UNNotificationContent *)) completion;
 
-/**
-*   This method returns the id associate with device.
-*   @return  device identifier
-*/
-+(NSString*) deviceId;
++(void)startSession:(NSString*)appKey withOptions:(NSDictionary*)launchOptions __attribute__((deprecated("Use startSession without options")));
 
-
-/**
- Request IDFA Tracking for iOS 14 and over
- */
-+(void) requestTrackingWithIdfa API_AVAILABLE(ios(14.0));
-
-
-/**
- This method associates the user with the device.
-  @param customerId The customer Id
- */
-+(void) setCustomerId: (NSString*) customerId;
++(void)startPushSystem: (NSDictionary*) launchOptions __attribute__((deprecated("Use startPushSystem without parameters")));
 
 @end

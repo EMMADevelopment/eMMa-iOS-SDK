@@ -1,4 +1,7 @@
 # CHANGELOG
+## 4.8.1 - 07/01/2021
+[FIX] Fixed crash "Collection was mutated while being enumerated" in campaign controller <br/>
+[FIX] Minor bugs fixed
 
 ## 4.8.0 - 12/11/2020
 

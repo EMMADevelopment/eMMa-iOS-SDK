@@ -23,6 +23,10 @@
 @property (nonatomic, assign) id<EMMAPushDelegate> pushDelegate;
 @property (nonatomic, assign) id<UNUserNotificationCenterDelegate> pushNotificationsDelegate;
 @property BOOL trackScreenEvents;
+/** Enable or disable Apple Ads attribution. If Apple Ads attribution is disable the attribution is made with match by fingerprint.
+    Default YES.
+ */
+@property BOOL appleAdsAttribution;
 
 
 -(id) initWithSessionKey:(NSString*) sessionKey;
