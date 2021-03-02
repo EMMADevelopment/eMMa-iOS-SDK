@@ -1,0 +1,2 @@
+struct EMMA_iOS {
+}
