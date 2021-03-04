@@ -233,9 +233,8 @@ SWIFT_CLASS("_TtC8EMMA_iOS19EMMAInAppPluginImpl")
 
 SWIFT_PROTOCOL("_TtP8EMMA_iOS23EMMAInAppPluginProtocol_")
 @protocol EMMAInAppPluginProtocol
-- (NSString * _Nonnull)getType SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getId SWIFT_WARN_UNUSED_RESULT;
 - (void)show:(EMMANativeAd * _Nonnull)nativeAd;
-- (void)dismiss;
 @end
 
 
@@ -522,9 +521,8 @@ SWIFT_CLASS("_TtC8EMMA_iOS19EMMAInAppPluginImpl")
 
 SWIFT_PROTOCOL("_TtP8EMMA_iOS23EMMAInAppPluginProtocol_")
 @protocol EMMAInAppPluginProtocol
-- (NSString * _Nonnull)getType SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getId SWIFT_WARN_UNUSED_RESULT;
 - (void)show:(EMMANativeAd * _Nonnull)nativeAd;
-- (void)dismiss;
 @end
 
 

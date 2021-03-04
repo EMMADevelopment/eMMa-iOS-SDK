@@ -25,9 +25,8 @@ import UIKit
   @objc deinit
 }
 @objc public protocol EMMAInAppPluginProtocol {
-  @objc func getType() -> Swift.String
+  @objc func getId() -> Swift.String
   @objc func show(_ nativeAd: EMMA_iOS.EMMANativeAd)
-  @objc func dismiss()
 }
 @objc @_inheritsConvenienceInitializers @objcMembers open class EMMAInAppPluginImpl : ObjectiveC.NSObject {
   @objc public class func sendImpression(campaign: EMMA_iOS.EMMACampaign)
@@ -121,6 +120,9 @@ public typealias EMMAInAppPlugin = EMMA_iOS.EMMAInAppPluginImpl & EMMA_iOS.EMMAI
   public static func setWebSDKDomain(domain: Swift.String)
   public static func addInAppPlugins(_ plugins: [EMMA_iOS.EMMAInAppPluginProtocol])
   public static func rootViewController() -> UIKit.UIViewController?
+  public static func invokeShownDelegates(campaign: EMMA_iOS.EMMACampaign)
+  public static func invokeHideDelegates(campaign: EMMA_iOS.EMMACampaign)
+  public static func invokeCloseDelegates(campaign: EMMA_iOS.EMMACampaign)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class EMMAInAppPluginController : ObjectiveC.NSObject {
