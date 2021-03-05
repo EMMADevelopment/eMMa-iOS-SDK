@@ -226,6 +226,9 @@ SWIFT_CLASS("_TtC8EMMA_iOS19EMMAInAppPluginImpl")
 @interface EMMAInAppPluginImpl : NSObject
 + (void)sendImpressionWithCampaign:(EMMACampaign * _Nonnull)campaign;
 + (void)sendClickWithCampaign:(EMMACampaign * _Nonnull)campaign;
++ (void)invokeShownDelegatesWithCampaign:(EMMACampaign * _Nonnull)campaign;
++ (void)invokeHideDelegatesWithCampaign:(EMMACampaign * _Nonnull)campaign;
++ (void)invokeCloseDelegatesWithCampaign:(EMMACampaign * _Nonnull)campaign;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -235,6 +238,7 @@ SWIFT_PROTOCOL("_TtP8EMMA_iOS23EMMAInAppPluginProtocol_")
 @protocol EMMAInAppPluginProtocol
 - (NSString * _Nonnull)getId SWIFT_WARN_UNUSED_RESULT;
 - (void)show:(EMMANativeAd * _Nonnull)nativeAd;
+- (void)dismiss;
 @end
 
 
@@ -514,6 +518,9 @@ SWIFT_CLASS("_TtC8EMMA_iOS19EMMAInAppPluginImpl")
 @interface EMMAInAppPluginImpl : NSObject
 + (void)sendImpressionWithCampaign:(EMMACampaign * _Nonnull)campaign;
 + (void)sendClickWithCampaign:(EMMACampaign * _Nonnull)campaign;
++ (void)invokeShownDelegatesWithCampaign:(EMMACampaign * _Nonnull)campaign;
++ (void)invokeHideDelegatesWithCampaign:(EMMACampaign * _Nonnull)campaign;
++ (void)invokeCloseDelegatesWithCampaign:(EMMACampaign * _Nonnull)campaign;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -523,6 +530,7 @@ SWIFT_PROTOCOL("_TtP8EMMA_iOS23EMMAInAppPluginProtocol_")
 @protocol EMMAInAppPluginProtocol
 - (NSString * _Nonnull)getId SWIFT_WARN_UNUSED_RESULT;
 - (void)show:(EMMANativeAd * _Nonnull)nativeAd;
+- (void)dismiss;
 @end
 
 
@@ -802,6 +810,9 @@ SWIFT_CLASS("_TtC8EMMA_iOS19EMMAInAppPluginImpl")
 @interface EMMAInAppPluginImpl : NSObject
 + (void)sendImpressionWithCampaign:(EMMACampaign * _Nonnull)campaign;
 + (void)sendClickWithCampaign:(EMMACampaign * _Nonnull)campaign;
++ (void)invokeShownDelegatesWithCampaign:(EMMACampaign * _Nonnull)campaign;
++ (void)invokeHideDelegatesWithCampaign:(EMMACampaign * _Nonnull)campaign;
++ (void)invokeCloseDelegatesWithCampaign:(EMMACampaign * _Nonnull)campaign;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -811,6 +822,7 @@ SWIFT_PROTOCOL("_TtP8EMMA_iOS23EMMAInAppPluginProtocol_")
 @protocol EMMAInAppPluginProtocol
 - (NSString * _Nonnull)getId SWIFT_WARN_UNUSED_RESULT;
 - (void)show:(EMMANativeAd * _Nonnull)nativeAd;
+- (void)dismiss;
 @end
 
 
