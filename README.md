@@ -1,10 +1,10 @@
 # EMMA iOS SDK
 
-## INTRODUCTION
+## Introduction
 
 This is the official EMMA iOS SDK. For more info you can visit https://emma.io/en/ 
 
-## INSTALLATION
+## Installation
 
 ### Swift Package Manager
 
@@ -24,6 +24,6 @@ You can download the SDK from CocoaPods adding the following line to Podfile:
 
 `pod 'eMMa'`
 
-## DOCUMENTATION
+## Documentation
 
 You can visit the technical documentation **[here](https://support.emma.io/hc/en-us/articles/115002811374-iOS-Integration)** for more info.
