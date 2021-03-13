@@ -1,4 +1,30 @@
 # CHANGELOG
+## 4.9.0 - 13/02/2021
+[CHANGE] Changed deployment target to iOS 9 <br/>
+[NEW] SDK partial rewritten in Swift lenguage. The API has been adpated.
+[NEW] SDK reescrito parcialmente en swift. Se han adaptado varias api's para ser mas convenientes en el lenguaje swift. <br/>
+[REMOVE] Removed method `+(void)startSession:(NSString*)appKey withOptions:(NSDictionary*)launchOptions __attribute__((deprecated("Use startSession without options")));`<br/>
+[REMOVE] Removed method `+(void) startPushSystem: (NSDictionary*) launchOptions __attribute__((deprecated("Use startPushSystem without parameters")));`<br/>
+[REMOVE] Removed method `+(void)startOrder:(NSString*)orderId customerId:(NSString*)customerId totalPrice:(float)totalPrice coupon:(NSString*)coupon;`
+[REMOVE] Removed method `+(void)registerUser:(NSString*)userId forMail: (NSString*)mail;` and replaced by optionals. <br/>
+[REMOVE] Removed method `+(void)loginUser:(NSString*)userId forMail:(NSString*)mail;` and replaced by optionals. <br/>
+[REMOVE]Removed method `+(void)addProduct:(NSString*)productId name:(NSString*)name qty:(float)qty price:(float)price;`<br/>
+[REMOVE] Removed method `+(void)addRateAlertForAppStoreURL:(NSString*)appStoreURL;` <br/>
+[REMOVE] Removed method`+(void) setRateAlertFreq: (int) hours;` <br/>
+[REMOVE] Removed method`+(void) setRateAlertTitle: (NSString*) title;`<br/>
+[REMOVE] Removed method `+(void) setRateAlertMessage: (NSString*) message;` <br/>
+[REMOVE] Removed method `+(void) setRateAlertCancelButton: (NSString*)>cancelButtonText;` <br/>
+[REMOVE] Removed method `+(void) setRateAlertRateItButton: (NSString*) rateItButtonText;` <br/>
+[REMOVE] Removed method`+(void) setRateAlertLaterButton: (NSString*) laterButtonText;` <br/>
+[REMOVE] Removed method `+(void) setRateAlertShowAfterUpdate:(BOOL) showAlert;` <br/>
+[RENAME] Renamed method `EMMA.add(inAppDelegate: self)` to `EMMA.addInAppDelegate(delegate: self)` <br/>
+[RENAME] Renamed method ` EMMA.trackEvent(eventRequest)` to `EMMA.trackEvent(request: eventRequest)` <br/>
+[RENAME] Renamed method ` EMMA.handleLink(url)`to `EMMA.handleLink(url: url)` <br/>
+[RENAME] Renamed method ` EMMA.handlePush(userInfo)` to `EMMA.handleLink(userInfo: userInfo)` <br/>
+[RENAME] Renamed method ` EMMA.openNativeAd(nativeAdCampaignId: campaignId)` to `EMMA.opeNativeAd(campaignId: campaignId)`<br/>
+
+[NEW] New method to add inapp plugins
+
 ## 4.8.1 - 07/01/2021
 [FIX] Fixed crash "Collection was mutated while being enumerated" in campaign controller <br/>
 [FIX] Minor bugs fixed
