@@ -12,12 +12,16 @@
 
 @interface EMMAInAppRequest : NSObject
 
-@property (nonatomic, strong) NSString *customId;
-@property (nonatomic, strong) NSString *label;
-@property (nonatomic, strong) NSString *inAppMessageId;
-@property (nonatomic, strong) id<EMMARequestDelegate> requestDelegate;
+@property (nonatomic, strong, nullable) NSString *customId;
+@property (nonatomic, strong, nullable) NSString *label;
+@property (nonatomic, strong, nullable) NSString *inAppMessageId;
+@property (nonatomic, strong, nullable) id<EMMARequestDelegate> requestDelegate;
 
--(instancetype)initWithType:(InAppType) type;
+NS_ASSUME_NONNULL_BEGIN
+
+-(id)initWithType:(InAppType) type;
 -(InAppType) type;
+
+NS_ASSUME_NONNULL_END
 
 @end

@@ -1,6 +1,7 @@
 # CHANGELOG
 ## 4.9.1 - 18/03/2021
-[FIX] Fixed EMMAEventRequest as optional when instantiating 
+[FIX] Fixed EMMAEventRequest as optional when instantiating <br/>
+[FIX] Fixed EMMAInAppRequest as optional when instantiating 
 ## 4.9.0 - 13/03/2021
 [CHANGE] Changed deployment target to iOS 9 <br/>
 [NEW] SDK partial rewritten in Swift lenguage. The API has been adpated.
