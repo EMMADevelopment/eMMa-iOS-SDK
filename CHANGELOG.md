@@ -1,5 +1,7 @@
 # CHANGELOG
-## 4.9.0 - 13/02/2021
+## 4.9.1 - 18/03/2021
+[FIX] Fixed EMMAEventRequest as optional when instantiating 
+## 4.9.0 - 13/03/2021
 [CHANGE] Changed deployment target to iOS 9 <br/>
 [NEW] SDK partial rewritten in Swift lenguage. The API has been adpated.
 [NEW] SDK reescrito parcialmente en swift. Se han adaptado varias api's para ser mas convenientes en el lenguaje swift. <br/>

@@ -26,7 +26,7 @@
 		</data>
 		<key>Headers/EMMAEventRequest.h</key>
 		<data>
-		8AGlHqKoUuJDp/lUkB8apV9NVx4=
+		4NMS1zdkNrbjhajU5d7opQJ4Nj0=
 		</data>
 		<key>Headers/EMMAInAppRequest.h</key>
 		<data>
@@ -78,11 +78,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		x+Rjvciwd5mBGOkXEVMXSIe2pY4=
+		sp5f42kPfF6asJfPZsNY9m7BKr4=
 		</data>
 		<key>Modules/EMMA_iOS.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		AhpRBp/PDwpoDSJhaMwRBFl6zck=
+		2IqLoXZbKxspaZW+vci1KEZIC6M=
 		</data>
 		<key>Modules/EMMA_iOS.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Modules/EMMA_iOS.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		AhpRBp/PDwpoDSJhaMwRBFl6zck=
+		2IqLoXZbKxspaZW+vci1KEZIC6M=
 		</data>
 		<key>Modules/EMMA_iOS.swiftmodule/arm64.swiftinterface</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>Modules/EMMA_iOS.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
-		gD9377zaFLqmrT3lRAVUj/YpBY8=
+		agkGQ/7tPu4zHexjyyaR8ZPfWWo=
 		</data>
 		<key>Modules/EMMA_iOS.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
 		<data>
@@ -118,7 +118,7 @@
 		</data>
 		<key>Modules/EMMA_iOS.swiftmodule/i386.swiftdoc</key>
 		<data>
-		gD9377zaFLqmrT3lRAVUj/YpBY8=
+		agkGQ/7tPu4zHexjyyaR8ZPfWWo=
 		</data>
 		<key>Modules/EMMA_iOS.swiftmodule/i386.swiftinterface</key>
 		<data>
@@ -130,7 +130,7 @@
 		</data>
 		<key>Modules/EMMA_iOS.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		uQRZEBouEtsHRBxaouj8tHp6CtE=
+		nrx2Po4sA8kGqV1Qt7IaezhitmY=
 		</data>
 		<key>Modules/EMMA_iOS.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
@@ -142,7 +142,7 @@
 		</data>
 		<key>Modules/EMMA_iOS.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		uQRZEBouEtsHRBxaouj8tHp6CtE=
+		nrx2Po4sA8kGqV1Qt7IaezhitmY=
 		</data>
 		<key>Modules/EMMA_iOS.swiftmodule/x86_64.swiftinterface</key>
 		<data>
@@ -218,11 +218,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8AGlHqKoUuJDp/lUkB8apV9NVx4=
+			4NMS1zdkNrbjhajU5d7opQJ4Nj0=
 			</data>
 			<key>hash2</key>
 			<data>
-			FU6ys5OnGXsz6RzlMEI9lY2/YpMEz6ZvBPCbmrjVxXk=
+			tQvbVIhzTHAYQY35RiiYWu2BMVHxN2D5G7Kz3EQXV2A=
 			</data>
 		</dict>
 		<key>Headers/EMMAInAppRequest.h</key>
@@ -361,11 +361,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AhpRBp/PDwpoDSJhaMwRBFl6zck=
+			2IqLoXZbKxspaZW+vci1KEZIC6M=
 			</data>
 			<key>hash2</key>
 			<data>
-			DZ9Bm24VCUP1w7CgoN8nbQ5lyxcc0DK54H/hW1ocWpM=
+			GfdEx6O+oER6PhD1rRz2RPI2BuM2cTJVQGUo92EjAsE=
 			</data>
 		</dict>
 		<key>Modules/EMMA_iOS.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
@@ -394,11 +394,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AhpRBp/PDwpoDSJhaMwRBFl6zck=
+			2IqLoXZbKxspaZW+vci1KEZIC6M=
 			</data>
 			<key>hash2</key>
 			<data>
-			DZ9Bm24VCUP1w7CgoN8nbQ5lyxcc0DK54H/hW1ocWpM=
+			GfdEx6O+oER6PhD1rRz2RPI2BuM2cTJVQGUo92EjAsE=
 			</data>
 		</dict>
 		<key>Modules/EMMA_iOS.swiftmodule/arm64.swiftinterface</key>
@@ -427,11 +427,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gD9377zaFLqmrT3lRAVUj/YpBY8=
+			agkGQ/7tPu4zHexjyyaR8ZPfWWo=
 			</data>
 			<key>hash2</key>
 			<data>
-			IucEg/t5/GZylSVpQ8igmcxEqoXyk5T31lO2V9mE5Cs=
+			ZK0ykBx4LLJpuvWQqediYaPTeQfgb5ehCEscuBPvvJw=
 			</data>
 		</dict>
 		<key>Modules/EMMA_iOS.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
@@ -460,11 +460,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gD9377zaFLqmrT3lRAVUj/YpBY8=
+			agkGQ/7tPu4zHexjyyaR8ZPfWWo=
 			</data>
 			<key>hash2</key>
 			<data>
-			IucEg/t5/GZylSVpQ8igmcxEqoXyk5T31lO2V9mE5Cs=
+			ZK0ykBx4LLJpuvWQqediYaPTeQfgb5ehCEscuBPvvJw=
 			</data>
 		</dict>
 		<key>Modules/EMMA_iOS.swiftmodule/i386.swiftinterface</key>
@@ -493,11 +493,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uQRZEBouEtsHRBxaouj8tHp6CtE=
+			nrx2Po4sA8kGqV1Qt7IaezhitmY=
 			</data>
 			<key>hash2</key>
 			<data>
-			iNxoiffbwt9pR0bb5FTM0dyiBKjJiC7ypaqLbL8cvZI=
+			UumagIsMZyYJMw+y3JXzDG4+joMJ4rP7J5DkSl8bzpw=
 			</data>
 		</dict>
 		<key>Modules/EMMA_iOS.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
@@ -526,11 +526,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uQRZEBouEtsHRBxaouj8tHp6CtE=
+			nrx2Po4sA8kGqV1Qt7IaezhitmY=
 			</data>
 			<key>hash2</key>
 			<data>
-			iNxoiffbwt9pR0bb5FTM0dyiBKjJiC7ypaqLbL8cvZI=
+			UumagIsMZyYJMw+y3JXzDG4+joMJ4rP7J5DkSl8bzpw=
 			</data>
 		</dict>
 		<key>Modules/EMMA_iOS.swiftmodule/x86_64.swiftinterface</key>
