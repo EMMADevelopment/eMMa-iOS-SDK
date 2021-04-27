@@ -1,7 +1,9 @@
 # CHANGELOG
+## 4.9.2 - 27/04/2021
+[FIX] In early versions of iOS 14 sometimes the IDFA was not obtained correctly <br/>
+[FIX] Fixed bug customerId in purchases added in version 4.9.0
 ## 4.9.1 - 18/03/2021
 [FIX] Fixed EMMAEventRequest as optional when instantiating <br/>
-[FIX] Fixed EMMAInAppRequest as optional when instantiating 
 ## 4.9.0 - 13/03/2021
 [CHANGE] Changed deployment target to iOS 9 <br/>
 [NEW] SDK partial rewritten in Swift lenguage. The API has been adpated. <br/>
