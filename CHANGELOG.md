@@ -1,4 +1,6 @@
 # CHANGELOG
+## 4.9.3 - 07/10/2021
+[FIX] Fixed problem banner dismiss root viewcontregllar and minor bugs
 ## 4.9.2 - 27/04/2021
 [FIX] In early versions of iOS 14 sometimes the IDFA was not obtained correctly <br/>
 [FIX] Fixed bug customerId in purchases added in version 4.9.0
