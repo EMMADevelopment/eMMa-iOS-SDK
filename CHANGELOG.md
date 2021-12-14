@@ -1,4 +1,6 @@
 # CHANGELOG
+## 4.9.4 - 14/12/2021
+[FIX] Updated ASA with AdServices.framework
 ## 4.9.3 - 07/10/2021
 [FIX] Fixed problem banner dismiss root viewcontregllar and minor bugs
 ## 4.9.2 - 27/04/2021
