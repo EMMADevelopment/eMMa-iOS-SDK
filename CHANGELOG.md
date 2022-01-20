@@ -1,4 +1,6 @@
 # CHANGELOG
+## 4.10.0 - 20/01/2022
+[NEW] Notifications with action buttons
 ## 4.9.4 - 14/12/2021
 [FIX] Updated ASA with AdServices.framework
 ## 4.9.3 - 07/10/2021
