@@ -1,4 +1,6 @@
 # CHANGELOG
+## 4.10.1 - 07/02/2022
+[FIX] Fixed Apple Attribution with AdServices.framework. On iOS 14.3 to 14.8.1 it could produced a hang.
 ## 4.10.0 - 20/01/2022
 [NEW] Notifications with action buttons
 ## 4.9.4 - 14/12/2021
