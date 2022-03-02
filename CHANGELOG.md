@@ -1,10 +1,8 @@
 # CHANGELOG
-## 4.10.1 - 07/02/2022
+## 4.10.1 - 07/02/2022 [deleted version]
 [FIX] Fixed Apple Attribution with AdServices.framework. On iOS 14.3 to 14.8.1 it could produced a hang.
-## 4.10.0 - 20/01/2022
+## 4.10.0 - 20/01/2022 [deleted version]
 [NEW] Notifications with action buttons
-## 4.9.4 - 14/12/2021
-[FIX] Updated ASA with AdServices.framework
 ## 4.9.3 - 07/10/2021
 [FIX] Fixed problem banner dismiss root viewcontregllar and minor bugs
 ## 4.9.2 - 27/04/2021
