@@ -1,16 +1,32 @@
 # CHANGELOG
+
+# 4.10.2 - 03/03/2022
+
+[FIX] Fixed critical crash produced in production only with app with SDK started and request ASA atribution. Versions 4.10.0 and 4.10.1 have been deleted due to affection.
+
 ## 4.10.1 - 07/02/2022 [deleted version]
+
 [FIX] Fixed Apple Attribution with AdServices.framework. On iOS 14.3 to 14.8.1 it could produced a hang.
+
 ## 4.10.0 - 20/01/2022 [deleted version]
+
 [NEW] Notifications with action buttons
+
 ## 4.9.3 - 07/10/2021
+
 [FIX] Fixed problem banner dismiss root viewcontregllar and minor bugs
+
 ## 4.9.2 - 27/04/2021
+
 [FIX] In early versions of iOS 14 sometimes the IDFA was not obtained correctly <br/>
 [FIX] Fixed bug customerId in purchases added in version 4.9.0
+
 ## 4.9.1 - 18/03/2021
+
 [FIX] Fixed EMMAEventRequest as optional when instantiating <br/>
+
 ## 4.9.0 - 13/03/2021
+
 [CHANGE] Changed deployment target to iOS 9 <br/>
 [NEW] SDK partial rewritten in Swift lenguage. The API has been adpated. <br/>
 [NEW] SDK reescrito parcialmente en swift. Se han adaptado varias api's para ser mas convenientes en el lenguaje swift. <br/>
@@ -37,6 +53,7 @@
 [NEW] New method to add inapp plugins
 
 ## 4.8.1 - 07/01/2021
+
 [FIX] Fixed crash "Collection was mutated while being enumerated" in campaign controller <br/>
 [FIX] Minor bugs fixed
 
