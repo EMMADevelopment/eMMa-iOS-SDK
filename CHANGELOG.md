@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# 4.10.3 - 24/03/2022
+
+[FIX] Fixed coupon end date not showing.
+
 # 4.10.2 - 03/03/2022
 
 [FIX] Fixed critical crash produced in production only with app with SDK started and request ASA atribution. Versions 4.10.0 and 4.10.1 have been deleted due to affection.
