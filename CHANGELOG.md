@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# 4.11.0 - 05/05/2022
+
+[NEW] Click types for inapp communications Adball and StartView
+
 # 4.10.3 - 24/03/2022
 
 [FIX] Fixed coupon end date not showing.

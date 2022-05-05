@@ -219,6 +219,37 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class EMMAClickMode;
+@class NSObject;
+
+SWIFT_CLASS("_TtC8EMMA_iOS18EMMAAdBallCampaign")
+@interface EMMAAdBallCampaign : EMMACampaign
+@property (nonatomic, strong) EMMAClickMode * _Nonnull clickMode;
+@property (nonatomic) NSInteger horizontalLocation;
+@property (nonatomic) NSInteger verticalLocation;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)parseResponseInfo:(NSDictionary * _Nonnull)response;
+- (null_unspecified instancetype)initWithType:(EMMACampaignType)type SWIFT_UNAVAILABLE;
+@end
+
+enum EMMAClickModeType : NSInteger;
+@class NSURL;
+
+SWIFT_CLASS("_TtC8EMMA_iOS13EMMAClickMode")
+@interface EMMAClickMode : NSObject
+@property (nonatomic) enum EMMAClickModeType type;
+@property (nonatomic, copy) NSURL * _Nullable ctaUrl;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init:(NSDictionary * _Nonnull)rawClickMode OBJC_DESIGNATED_INITIALIZER;
+@end
+
+typedef SWIFT_ENUM(NSInteger, EMMAClickModeType, open) {
+  EMMAClickModeTypeTap = 0,
+  EMMAClickModeTypeDeeplink = 1,
+  EMMAClickModeTypeChangeUrl = 2,
+  EMMAClickModeTypeCustomUrl = 3,
+};
+
 @class NSString;
 @protocol EMMAInAppPluginProtocol;
 
@@ -230,7 +261,6 @@ SWIFT_CLASS("_TtC8EMMA_iOS25EMMAInAppPluginController")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class EMMACampaign;
 
 SWIFT_CLASS("_TtC8EMMA_iOS19EMMAInAppPluginImpl")
 @interface EMMAInAppPluginImpl : NSObject
@@ -288,7 +318,6 @@ SWIFT_CLASS("_TtC8EMMA_iOS8EMMAPush")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class NSURL;
 enum EMMAPushButtonIconType : NSInteger;
 
 SWIFT_CLASS("_TtC8EMMA_iOS20EMMAPushActionButton")
@@ -332,6 +361,15 @@ SWIFT_CLASS("_TtC8EMMA_iOS15EMMAPushPayload")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
+SWIFT_CLASS("_TtC8EMMA_iOS21EMMAStartViewCampaign")
+@interface EMMAStartViewCampaign : EMMACampaign
+@property (nonatomic, strong) EMMAClickMode * _Nonnull clickMode;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)parseResponseInfo:(NSDictionary * _Nonnull)response;
+- (null_unspecified instancetype)initWithType:(EMMACampaignType)type SWIFT_UNAVAILABLE;
+@end
+
 @class UIColor;
 @class NSTimeZone;
 @class NSDate;
@@ -346,7 +384,8 @@ SWIFT_CLASS("_TtC8EMMA_iOS9EMMAUtils")
 + (NSDate * _Nullable)dateFromString:(NSString * _Nonnull)dateString withFormat:(NSString * _Nonnull)format SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nonnull)dateToString:(NSDate * _Nonnull)date withFormat:(NSString * _Nonnull)format andTimeZone:(NSTimeZone * _Nullable)timeZone SWIFT_WARN_UNUSED_RESULT;
 + (NSDate * _Nonnull)addHoursWithHours:(NSInteger)hours toDate:(NSDate * _Nonnull)date SWIFT_WARN_UNUSED_RESULT;
-+ (BOOL)isWebAddress:(NSURL * _Nonnull)url SWIFT_WARN_UNUSED_RESULT;
++ (BOOL)isWebAddress:(NSURL * _Nullable)url SWIFT_WARN_UNUSED_RESULT;
++ (BOOL)areEqualsUrls:(NSURL * _Nullable)url1 :(NSURL * _Nullable)url2 SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nonnull)dateToStringLocalTimeWithDate:(NSDate * _Nonnull)date withFormat:(NSString * _Nonnull)format SWIFT_WARN_UNUSED_RESULT;
 + (UIApplication * _Nullable)getSharedApplication SWIFT_WARN_UNUSED_RESULT;
 + (BOOL)isNil:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
@@ -598,6 +637,37 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class EMMAClickMode;
+@class NSObject;
+
+SWIFT_CLASS("_TtC8EMMA_iOS18EMMAAdBallCampaign")
+@interface EMMAAdBallCampaign : EMMACampaign
+@property (nonatomic, strong) EMMAClickMode * _Nonnull clickMode;
+@property (nonatomic) NSInteger horizontalLocation;
+@property (nonatomic) NSInteger verticalLocation;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)parseResponseInfo:(NSDictionary * _Nonnull)response;
+- (null_unspecified instancetype)initWithType:(EMMACampaignType)type SWIFT_UNAVAILABLE;
+@end
+
+enum EMMAClickModeType : NSInteger;
+@class NSURL;
+
+SWIFT_CLASS("_TtC8EMMA_iOS13EMMAClickMode")
+@interface EMMAClickMode : NSObject
+@property (nonatomic) enum EMMAClickModeType type;
+@property (nonatomic, copy) NSURL * _Nullable ctaUrl;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init:(NSDictionary * _Nonnull)rawClickMode OBJC_DESIGNATED_INITIALIZER;
+@end
+
+typedef SWIFT_ENUM(NSInteger, EMMAClickModeType, open) {
+  EMMAClickModeTypeTap = 0,
+  EMMAClickModeTypeDeeplink = 1,
+  EMMAClickModeTypeChangeUrl = 2,
+  EMMAClickModeTypeCustomUrl = 3,
+};
+
 @class NSString;
 @protocol EMMAInAppPluginProtocol;
 
@@ -609,7 +679,6 @@ SWIFT_CLASS("_TtC8EMMA_iOS25EMMAInAppPluginController")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class EMMACampaign;
 
 SWIFT_CLASS("_TtC8EMMA_iOS19EMMAInAppPluginImpl")
 @interface EMMAInAppPluginImpl : NSObject
@@ -667,7 +736,6 @@ SWIFT_CLASS("_TtC8EMMA_iOS8EMMAPush")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class NSURL;
 enum EMMAPushButtonIconType : NSInteger;
 
 SWIFT_CLASS("_TtC8EMMA_iOS20EMMAPushActionButton")
@@ -711,6 +779,15 @@ SWIFT_CLASS("_TtC8EMMA_iOS15EMMAPushPayload")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
+SWIFT_CLASS("_TtC8EMMA_iOS21EMMAStartViewCampaign")
+@interface EMMAStartViewCampaign : EMMACampaign
+@property (nonatomic, strong) EMMAClickMode * _Nonnull clickMode;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)parseResponseInfo:(NSDictionary * _Nonnull)response;
+- (null_unspecified instancetype)initWithType:(EMMACampaignType)type SWIFT_UNAVAILABLE;
+@end
+
 @class UIColor;
 @class NSTimeZone;
 @class NSDate;
@@ -725,7 +802,8 @@ SWIFT_CLASS("_TtC8EMMA_iOS9EMMAUtils")
 + (NSDate * _Nullable)dateFromString:(NSString * _Nonnull)dateString withFormat:(NSString * _Nonnull)format SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nonnull)dateToString:(NSDate * _Nonnull)date withFormat:(NSString * _Nonnull)format andTimeZone:(NSTimeZone * _Nullable)timeZone SWIFT_WARN_UNUSED_RESULT;
 + (NSDate * _Nonnull)addHoursWithHours:(NSInteger)hours toDate:(NSDate * _Nonnull)date SWIFT_WARN_UNUSED_RESULT;
-+ (BOOL)isWebAddress:(NSURL * _Nonnull)url SWIFT_WARN_UNUSED_RESULT;
++ (BOOL)isWebAddress:(NSURL * _Nullable)url SWIFT_WARN_UNUSED_RESULT;
++ (BOOL)areEqualsUrls:(NSURL * _Nullable)url1 :(NSURL * _Nullable)url2 SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nonnull)dateToStringLocalTimeWithDate:(NSDate * _Nonnull)date withFormat:(NSString * _Nonnull)format SWIFT_WARN_UNUSED_RESULT;
 + (UIApplication * _Nullable)getSharedApplication SWIFT_WARN_UNUSED_RESULT;
 + (BOOL)isNil:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
@@ -977,6 +1055,37 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class EMMAClickMode;
+@class NSObject;
+
+SWIFT_CLASS("_TtC8EMMA_iOS18EMMAAdBallCampaign")
+@interface EMMAAdBallCampaign : EMMACampaign
+@property (nonatomic, strong) EMMAClickMode * _Nonnull clickMode;
+@property (nonatomic) NSInteger horizontalLocation;
+@property (nonatomic) NSInteger verticalLocation;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)parseResponseInfo:(NSDictionary * _Nonnull)response;
+- (null_unspecified instancetype)initWithType:(EMMACampaignType)type SWIFT_UNAVAILABLE;
+@end
+
+enum EMMAClickModeType : NSInteger;
+@class NSURL;
+
+SWIFT_CLASS("_TtC8EMMA_iOS13EMMAClickMode")
+@interface EMMAClickMode : NSObject
+@property (nonatomic) enum EMMAClickModeType type;
+@property (nonatomic, copy) NSURL * _Nullable ctaUrl;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init:(NSDictionary * _Nonnull)rawClickMode OBJC_DESIGNATED_INITIALIZER;
+@end
+
+typedef SWIFT_ENUM(NSInteger, EMMAClickModeType, open) {
+  EMMAClickModeTypeTap = 0,
+  EMMAClickModeTypeDeeplink = 1,
+  EMMAClickModeTypeChangeUrl = 2,
+  EMMAClickModeTypeCustomUrl = 3,
+};
+
 @class NSString;
 @protocol EMMAInAppPluginProtocol;
 
@@ -988,7 +1097,6 @@ SWIFT_CLASS("_TtC8EMMA_iOS25EMMAInAppPluginController")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class EMMACampaign;
 
 SWIFT_CLASS("_TtC8EMMA_iOS19EMMAInAppPluginImpl")
 @interface EMMAInAppPluginImpl : NSObject
@@ -1046,7 +1154,6 @@ SWIFT_CLASS("_TtC8EMMA_iOS8EMMAPush")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class NSURL;
 enum EMMAPushButtonIconType : NSInteger;
 
 SWIFT_CLASS("_TtC8EMMA_iOS20EMMAPushActionButton")
@@ -1090,6 +1197,15 @@ SWIFT_CLASS("_TtC8EMMA_iOS15EMMAPushPayload")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
+SWIFT_CLASS("_TtC8EMMA_iOS21EMMAStartViewCampaign")
+@interface EMMAStartViewCampaign : EMMACampaign
+@property (nonatomic, strong) EMMAClickMode * _Nonnull clickMode;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)parseResponseInfo:(NSDictionary * _Nonnull)response;
+- (null_unspecified instancetype)initWithType:(EMMACampaignType)type SWIFT_UNAVAILABLE;
+@end
+
 @class UIColor;
 @class NSTimeZone;
 @class NSDate;
@@ -1104,7 +1220,8 @@ SWIFT_CLASS("_TtC8EMMA_iOS9EMMAUtils")
 + (NSDate * _Nullable)dateFromString:(NSString * _Nonnull)dateString withFormat:(NSString * _Nonnull)format SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nonnull)dateToString:(NSDate * _Nonnull)date withFormat:(NSString * _Nonnull)format andTimeZone:(NSTimeZone * _Nullable)timeZone SWIFT_WARN_UNUSED_RESULT;
 + (NSDate * _Nonnull)addHoursWithHours:(NSInteger)hours toDate:(NSDate * _Nonnull)date SWIFT_WARN_UNUSED_RESULT;
-+ (BOOL)isWebAddress:(NSURL * _Nonnull)url SWIFT_WARN_UNUSED_RESULT;
++ (BOOL)isWebAddress:(NSURL * _Nullable)url SWIFT_WARN_UNUSED_RESULT;
++ (BOOL)areEqualsUrls:(NSURL * _Nullable)url1 :(NSURL * _Nullable)url2 SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nonnull)dateToStringLocalTimeWithDate:(NSDate * _Nonnull)date withFormat:(NSString * _Nonnull)format SWIFT_WARN_UNUSED_RESULT;
 + (UIApplication * _Nullable)getSharedApplication SWIFT_WARN_UNUSED_RESULT;
 + (BOOL)isNil:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
