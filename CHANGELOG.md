@@ -3,7 +3,7 @@
 ## 4.11.2 - 15/11/2022
 
 [NEW] Close webview from web with deeplink ://startview/close. <br/>
-[FIX] Fixed error added in 4.11.1, startview and adball with rules don't work correctly.
+[FIX] Fixed bug added in 4.11.1, startview and adball with rules don't work correctly.
 
 # 4.11.1 - 20/10/2022
 
