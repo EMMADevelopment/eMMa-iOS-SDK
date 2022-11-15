@@ -1,8 +1,13 @@
 # CHANGELOG
 
+## 4.11.2 - 15/11/2022
+
+[NEW] Close webview from web with deeplink ://startview/close. <br/>
+[FIX] Fixed error added in 4.11.1, startview and adball with rules don't work correctly.
+
 # 4.11.1 - 20/10/2022
 
-[FIX] Fixed StartView some times crashes when is inited outside the main thread.
+[FIX] Fixed StartView some times crashes when is inited outside the main thread. <br/>
 [FIX] Fixed crash whit nil dates in attribution process.
 
 # 4.11.0 - 05/05/2022
