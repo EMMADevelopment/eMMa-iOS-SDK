@@ -1,24 +1,24 @@
 # CHANGELOG
 
-# 4.11.2 - 15/11/2022
+## 4.11.2 - 15/11/2022
 
 [NEW] Close webview from web with deeplink ://startview/close. <br/>
 [FIX] Fixed bug added in 4.11.1, startview and adball with rules don't work correctly.
 
-# 4.11.1 - 20/10/2022
+## 4.11.1 - 20/10/2022
 
 [FIX] Fixed StartView some times crashes when is inited outside the main thread. <br/>
 [FIX] Fixed crash whit nil dates in attribution process.
 
-# 4.11.0 - 05/05/2022
+## 4.11.0 - 05/05/2022
 
 [NEW] Click types for inapp communications Adball and StartView
 
-# 4.10.3 - 24/03/2022
+## 4.10.3 - 24/03/2022
 
 [FIX] Fixed coupon end date not showing.
 
-# 4.10.2 - 03/03/2022
+## 4.10.2 - 03/03/2022
 
 [FIX] Fixed critical crash produced in production only with app with SDK started and request ASA atribution. Versions 4.10.0 and 4.10.1 have been deleted due to affection.
 
