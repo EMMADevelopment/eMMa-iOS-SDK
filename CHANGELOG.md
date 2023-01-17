@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.11.3 - 17/01/2023
+
+[REMOVE] Removed support for Apple Search Ads iAd.framework. Only for iOS < 14.3, from version 4.10.2 AdService.framework is used.
+
 ## 4.11.2 - 15/11/2022
 
 [NEW] Close webview from web with deeplink ://startview/close. <br/>
