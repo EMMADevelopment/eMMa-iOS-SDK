@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 4.11.4 - 23/03/2023
+
+[FIX] Sometimes the strip is hidden when the view controller is dismissed. The strip is now displayed on all view controllers. <br/>
+[NEW] closeStrip method has also been added to give you the freedom to close the strip whenever you want.
+
 ## 4.11.3 - 17/01/2023
 
 [REMOVE] Removed support for Apple Search Ads iAd.framework. Only for iOS < 14.3, from version 4.10.2 AdService.framework is used.

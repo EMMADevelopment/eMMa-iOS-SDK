@@ -203,6 +203,7 @@ public typealias EMMAInAppPlugin = EMMA_iOS.EMMAInAppPluginImpl & EMMA_iOS.EMMAI
   public static func setWebSDKDomain(domain: Swift.String)
   public static func addInAppPlugins(_ plugins: [EMMA_iOS.EMMAInAppPluginProtocol])
   public static func rootViewController() -> UIKit.UIViewController?
+  public static func closeStrip()
   @objc deinit
 }
 @objc @objcMembers public class EMMAPushPayload : ObjectiveC.NSObject {

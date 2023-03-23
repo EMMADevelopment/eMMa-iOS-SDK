@@ -690,5 +690,7 @@ For a simple configuration put this in you AppDelegate's method:
 
 +(void) invokeCloseDelegates:(EMMACampaign*) campaign;
 
++(void) closeStrip;
+
 #pragma clang diagnostic pop
 @end
