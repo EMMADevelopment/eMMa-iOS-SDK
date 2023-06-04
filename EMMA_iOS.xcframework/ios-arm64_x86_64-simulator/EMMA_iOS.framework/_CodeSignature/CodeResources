@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		iTu3MHbx7HbZsFiP412UFR5em9o=
+		lMi255wrtaJL+wWO4VlDjS7qeEU=
 		</data>
 		<key>Headers/EMMACampaign.h</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Headers/EMMA_iOS-Swift.h</key>
 		<data>
-		uf2J+vcc8YyUaXqdSFuE6syKG4U=
+		4SFAQVLqc7XtjLdFpXrNdkl5820=
 		</data>
 		<key>Headers/EMMA_iOS.h</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		yIv6M/1gCYqHVvbvj23GZOJyGY0=
+		VMfwKvyovR5wfzH0SsPecYLo/Q8=
 		</data>
 		<key>Modules/EMMA_iOS.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -82,19 +82,19 @@
 		</data>
 		<key>Modules/EMMA_iOS.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Zo2qCwScsSX52GHCBzNRn729HDs=
+		OKHvruYYhvDozex0lqN+HNqjPdE=
 		</data>
 		<key>Modules/EMMA_iOS.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		cv4zqMQc2W9Ydrl3117HFr1vDZA=
+		aPm9P6hJuzuItKln4jqqSW8t+Zc=
 		</data>
 		<key>Modules/EMMA_iOS.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Zo2qCwScsSX52GHCBzNRn729HDs=
+		OKHvruYYhvDozex0lqN+HNqjPdE=
 		</data>
 		<key>Modules/EMMA_iOS.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		L+nf8R3dLTDFQVw1E97QE4DUfus=
+		G5/g0+T+K9xjip/Tr+0BAmiO6Js=
 		</data>
 		<key>Modules/EMMA_iOS.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -102,19 +102,19 @@
 		</data>
 		<key>Modules/EMMA_iOS.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		L2wyzo+Lq/2CkDxQzK9lcUrqh3g=
+		AwtmHWKTdjdM4sjRYeJiQidZdJI=
 		</data>
 		<key>Modules/EMMA_iOS.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		2xMtud3vmYg6ylwSgKcRyNYvh7s=
+		uaF7ChdP2jc7aZcIrU6ooSH+T98=
 		</data>
 		<key>Modules/EMMA_iOS.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		L2wyzo+Lq/2CkDxQzK9lcUrqh3g=
+		AwtmHWKTdjdM4sjRYeJiQidZdJI=
 		</data>
 		<key>Modules/EMMA_iOS.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		0BUQtQxo1w5VO/Ki/w/fb+kJvYs=
+		TIIJkM+g20RvFJWk9MOXy1++f/0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -127,7 +127,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1kTr8YwuZkw00xtZf9rRTQ4c5qYJLp6T88svQrlF0eA=
+			uFxsxy/IJQCKGK84AZw2F+kV5sZXG3/96aGY73uLKBc=
 			</data>
 		</dict>
 		<key>Headers/EMMACampaign.h</key>
@@ -232,7 +232,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nCUtVIR33s2yF6HldaVPh8nuyhmxLbNx4sTUWZK3NmM=
+			SrvGgzRq2j7L/k5QmT3rywtzl/7q4nuRrENIqlWk9qc=
 			</data>
 		</dict>
 		<key>Headers/EMMA_iOS.h</key>
@@ -253,28 +253,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			maKLq5T30pL5WHL+HtWmB+IIZvS8zNTokodvtQ+YnvI=
+			XEw7V9PnJnVpL76SY59X+b+NILjIKWvUlYu8tVri+dA=
 			</data>
 		</dict>
 		<key>Modules/EMMA_iOS.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZQNK957nTKSnMnR7HurWV9G+vo0Wfi0ovxpCohCSzUY=
+			+ZspYLkuq0nJlxwmTz1pcM1F5m5rZ1Ut5vlSr+Vil08=
 			</data>
 		</dict>
 		<key>Modules/EMMA_iOS.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			maKLq5T30pL5WHL+HtWmB+IIZvS8zNTokodvtQ+YnvI=
+			XEw7V9PnJnVpL76SY59X+b+NILjIKWvUlYu8tVri+dA=
 			</data>
 		</dict>
 		<key>Modules/EMMA_iOS.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TzlMhvP0FvUo2aO4QoJC19yasWBoG5PKofYMv10BPUw=
+			v9/iMAcP6+iVcB79fN48Cs4NXOMukxkXygGMvYJlZak=
 			</data>
 		</dict>
 		<key>Modules/EMMA_iOS.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -288,28 +288,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ud6174nAFuQvnn/qaXbHUoMYdQ0PeKm+TdLypTQZ3xY=
+			lUV8cn4Wp/jWG+3e3smq73I+foLmuiqUVHgS+0YNuNw=
 			</data>
 		</dict>
 		<key>Modules/EMMA_iOS.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iiJV9TbfJYbTF19kTDfYTVgmOTKprR9SeXzUZjZNjGE=
+			5+ZveBAJ3DzdV0n9/omUisEdoP9jeeGbMUVj5QQJtJo=
 			</data>
 		</dict>
 		<key>Modules/EMMA_iOS.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ud6174nAFuQvnn/qaXbHUoMYdQ0PeKm+TdLypTQZ3xY=
+			lUV8cn4Wp/jWG+3e3smq73I+foLmuiqUVHgS+0YNuNw=
 			</data>
 		</dict>
 		<key>Modules/EMMA_iOS.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6Xf6sYkQv3USSLAx2nIGnj6vaL6ucvqkaEmR2KDTYDE=
+			qyg/2Iz+bVEcAVbBgAAB5wrabJt4mlVQZW87qfiKoAE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
