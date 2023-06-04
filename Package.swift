@@ -5,14 +5,15 @@ import PackageDescription
 
 let package = Package(
     name: "EMMA_iOS",
+    platforms: [
+      .iOS(.v11)
+    ],
     products: [
         .library(
             name: "EMMA_iOS",
             targets: ["EMMA_iOS"]),
     ],
-    dependencies: [
-    
-    ],
+    dependencies: [],
     targets: [
         .binaryTarget(name: "EMMA_iOS", path: "EMMA_iOS.xcframework")
     ]
