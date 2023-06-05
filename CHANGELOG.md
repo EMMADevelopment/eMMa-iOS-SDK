@@ -1,8 +1,9 @@
 # CHANGELOG
 
-## 4.12.0 - 02/05/2023
+## 4.12.0 - 05/06/2023
 
 [CHANGE] Disabled bitcode support. Apple deprecates bitcode with Xcode14: https://developer.apple.com/documentation/xcode-release-notes/xcode-14-release-notes <br/>
+[CHANGE] XCode14.1+ required: https://developer.apple.com/news/upcoming-requirements/?id=04252023a </br>
 [CHANGE] Updated iOS deployment target to iOS 11. Supported in devices with iOS 11+. <br/>
 [FIX] Some deep links within StartViews are executed before the startview is closed, causing overlapping ViewControllers. <br/>
 [IMPROVE] Support title in push notifications. <br/>
