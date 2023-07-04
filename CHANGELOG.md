@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.12.1 - 04/07/2023
+
+[IMPROVE] Added `updatePostbackConversionValue` with lockWindow paramater.
+
 ## 4.12.0 - 05/06/2023
 
 [CHANGE] Disabled bitcode support and removed i386 and armv7 architectures. Apple deprecates bitcode with Xcode14: https://developer.apple.com/documentation/xcode-release-notes/xcode-14-release-notes <br/>

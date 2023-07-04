@@ -208,6 +208,7 @@ public typealias EMMAInAppPlugin = EMMA_iOS.EMMAInAppPluginImpl & EMMA_iOS.EMMAI
   public static func closeStrip()
   public static func updatePostbackConversionValue(_ conversionValue: Swift.Int, completionHandler completion: (((any Swift.Error)?) -> Swift.Void)? = nil)
   public static func updatePostbackConversionValue(_ fineValue: Swift.Int, coarseValue: Swift.String, completionHandler completion: (((any Swift.Error)?) -> Swift.Void)? = nil)
+  public static func updatePostbackConversionValue(_ fineValue: Swift.Int, coarseValue: Swift.String, lockWindow: Swift.Bool, completionHandler completion: (((any Swift.Error)?) -> Swift.Void)? = nil)
   public static func updateConversionValue(_ conversionValue: Swift.Int)
   @objc deinit
 }
