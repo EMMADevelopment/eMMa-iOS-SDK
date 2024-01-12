@@ -8524,6 +8524,34 @@
             "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "EMMA_iOS"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "EMMA_iOS"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "EMMA_iOS"
+      },
+      {
+        "kind": "Import",
+        "name": "DeveloperToolsSupport",
+        "printedName": "DeveloperToolsSupport",
+        "declKind": "Import",
+        "moduleName": "EMMA_iOS"
       }
     ],
     "json_format_version": 8
@@ -8969,6 +8997,13 @@
       "offset": 193,
       "length": 21,
       "value": "\"EMMA_iOS.EMMAStartViewCampaign\""
+    },
+    {
+      "filePath": "\/Users\/acarrera\/Library\/Developer\/Xcode\/DerivedData\/EMMA-gmrfldzkbcjmgpctichlcjxtzjxo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EMMA_iOS\/IntermediateBuildFilesPath\/EMMA.build\/Release-iphoneos\/EMMA_iOS.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 742,
+      "length": 17,
+      "value": "\"startview_close\""
     }
   ]
 }

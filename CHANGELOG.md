@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.12.2 - 12/01/2024
+
+[FIX] Fixed currencyCode other than EUR not being sent in the trackOrder request.
+
 ## 4.12.1 - 04/07/2023
 
 [IMPROVE] Added `updatePostbackConversionValue` with lockWindow paramater.
