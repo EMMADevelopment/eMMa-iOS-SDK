@@ -169,6 +169,40 @@
             "funcSelfKind": "NonMutating"
           },
           {
+            "kind": "Function",
+            "name": "getMainWindowScene",
+            "printedName": "getMainWindowScene()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIWindowScene?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIWindowScene",
+                    "printedName": "UIKit.UIWindowScene",
+                    "usr": "c:objc(cs)UIWindowScene"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@EMMA_iOS@objc(cs)EMMAViewUtils(cm)getMainWindowScene",
+            "mangledName": "$s8EMMA_iOS13EMMAViewUtilsC18getMainWindowSceneSo08UIWindowH0CSgyFZ",
+            "moduleName": "EMMA_iOS",
+            "static": true,
+            "intro_iOS": "13.0",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "Available",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",

@@ -483,6 +483,7 @@ SWIFT_CLASS("_TtC8EMMA_iOS9EMMAUtils")
 
 @class UIWindow;
 @class UIViewController;
+@class UIWindowScene;
 
 SWIFT_CLASS("_TtC8EMMA_iOS13EMMAViewUtils")
 @interface EMMAViewUtils : NSObject
@@ -491,6 +492,7 @@ SWIFT_CLASS("_TtC8EMMA_iOS13EMMAViewUtils")
 + (BOOL)hasTopNotch SWIFT_WARN_UNUSED_RESULT;
 + (UIViewController * _Nullable)getRootViewController SWIFT_WARN_UNUSED_RESULT;
 + (BOOL)isSwiftUIApp:(NSString * _Nonnull)viewControllerName SWIFT_WARN_UNUSED_RESULT;
++ (UIWindowScene * _Nullable)getMainWindowScene SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,introduced=13.0);
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.12.3 - 17/01/2024
+
+[FIX] Fixed Strip not showing in Swift UI based apps.
+
 ## 4.12.2 - 12/01/2024
 
 [FIX] Fixed currencyCode other than EUR not being sent in the trackOrder request.

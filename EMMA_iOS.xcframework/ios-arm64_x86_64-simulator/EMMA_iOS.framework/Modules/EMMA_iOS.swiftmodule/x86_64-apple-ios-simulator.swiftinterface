@@ -18,6 +18,8 @@ import _SwiftConcurrencyShims
   @objc public static func hasTopNotch() -> Swift.Bool
   @objc public static func getRootViewController() -> UIKit.UIViewController?
   @objc public static func isSwiftUIApp(_ viewControllerName: Swift.String) -> Swift.Bool
+  @objc @available(iOS 13.0, *)
+  public static func getMainWindowScene() -> UIKit.UIWindowScene?
   @objc override dynamic public init()
   @objc deinit
 }
