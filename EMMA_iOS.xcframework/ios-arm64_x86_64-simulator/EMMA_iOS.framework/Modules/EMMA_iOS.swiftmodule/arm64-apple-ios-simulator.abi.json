@@ -3789,14 +3789,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
               }
             ],
             "declKind": "Var",
             "usr": "c:@M@EMMA_iOS@objc(cs)EMMABannerParams(py)offsetTop",
-            "mangledName": "$s8EMMA_iOS16EMMABannerParamsC9offsetTopSivp",
+            "mangledName": "$s8EMMA_iOS16EMMABannerParamsC9offsetTopSdvp",
             "moduleName": "EMMA_iOS",
             "declAttributes": [
               "HasInitialValue",
@@ -3813,14 +3813,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
                   }
                 ],
                 "declKind": "Accessor",
                 "usr": "c:@M@EMMA_iOS@objc(cs)EMMABannerParams(im)offsetTop",
-                "mangledName": "$s8EMMA_iOS16EMMABannerParamsC9offsetTopSivg",
+                "mangledName": "$s8EMMA_iOS16EMMABannerParamsC9offsetTopSdvg",
                 "moduleName": "EMMA_iOS",
                 "implicit": true,
                 "declAttributes": [
@@ -3840,14 +3840,14 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
                   }
                 ],
                 "declKind": "Accessor",
                 "usr": "c:@M@EMMA_iOS@objc(cs)EMMABannerParams(im)setOffsetTop:",
-                "mangledName": "$s8EMMA_iOS16EMMABannerParamsC9offsetTopSivs",
+                "mangledName": "$s8EMMA_iOS16EMMABannerParamsC9offsetTopSdvs",
                 "moduleName": "EMMA_iOS",
                 "implicit": true,
                 "declAttributes": [
@@ -3867,8 +3867,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8EMMA_iOS16EMMABannerParamsC9offsetTopSivM",
-                "mangledName": "$s8EMMA_iOS16EMMABannerParamsC9offsetTopSivM",
+                "usr": "s:8EMMA_iOS16EMMABannerParamsC9offsetTopSdvM",
+                "mangledName": "$s8EMMA_iOS16EMMABannerParamsC9offsetTopSdvM",
                 "moduleName": "EMMA_iOS",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -3882,14 +3882,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
               }
             ],
             "declKind": "Var",
             "usr": "c:@M@EMMA_iOS@objc(cs)EMMABannerParams(py)offsetBottom",
-            "mangledName": "$s8EMMA_iOS16EMMABannerParamsC12offsetBottomSivp",
+            "mangledName": "$s8EMMA_iOS16EMMABannerParamsC12offsetBottomSdvp",
             "moduleName": "EMMA_iOS",
             "declAttributes": [
               "HasInitialValue",
@@ -3906,14 +3906,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
                   }
                 ],
                 "declKind": "Accessor",
                 "usr": "c:@M@EMMA_iOS@objc(cs)EMMABannerParams(im)offsetBottom",
-                "mangledName": "$s8EMMA_iOS16EMMABannerParamsC12offsetBottomSivg",
+                "mangledName": "$s8EMMA_iOS16EMMABannerParamsC12offsetBottomSdvg",
                 "moduleName": "EMMA_iOS",
                 "implicit": true,
                 "declAttributes": [
@@ -3933,14 +3933,14 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
                   }
                 ],
                 "declKind": "Accessor",
                 "usr": "c:@M@EMMA_iOS@objc(cs)EMMABannerParams(im)setOffsetBottom:",
-                "mangledName": "$s8EMMA_iOS16EMMABannerParamsC12offsetBottomSivs",
+                "mangledName": "$s8EMMA_iOS16EMMABannerParamsC12offsetBottomSdvs",
                 "moduleName": "EMMA_iOS",
                 "implicit": true,
                 "declAttributes": [
@@ -3960,8 +3960,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8EMMA_iOS16EMMABannerParamsC12offsetBottomSivM",
-                "mangledName": "$s8EMMA_iOS16EMMABannerParamsC12offsetBottomSivM",
+                "usr": "s:8EMMA_iOS16EMMABannerParamsC12offsetBottomSdvM",
+                "mangledName": "$s8EMMA_iOS16EMMABannerParamsC12offsetBottomSdvM",
                 "moduleName": "EMMA_iOS",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -9161,14 +9161,14 @@
     {
       "filePath": "\/Users\/acarrera\/Documents\/devel\/emma-sdk-ios\/EMMA\/EMMASwift\/Utils\/Model\/EMMABannerParams.swift",
       "kind": "IntegerLiteral",
-      "offset": 245,
+      "offset": 248,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/acarrera\/Documents\/devel\/emma-sdk-ios\/EMMA\/EMMASwift\/Utils\/Model\/EMMABannerParams.swift",
       "kind": "IntegerLiteral",
-      "offset": 282,
+      "offset": 288,
       "length": 1,
       "value": "0"
     },

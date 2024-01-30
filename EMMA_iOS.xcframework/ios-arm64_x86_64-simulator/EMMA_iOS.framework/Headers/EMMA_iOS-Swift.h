@@ -319,8 +319,8 @@ SWIFT_CLASS("_TtC8EMMA_iOS18EMMAAdBallCampaign")
 
 SWIFT_CLASS("_TtC8EMMA_iOS16EMMABannerParams")
 @interface EMMABannerParams : NSObject
-@property (nonatomic) NSInteger offsetTop;
-@property (nonatomic) NSInteger offsetBottom;
+@property (nonatomic) double offsetTop;
+@property (nonatomic) double offsetBottom;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -839,8 +839,8 @@ SWIFT_CLASS("_TtC8EMMA_iOS18EMMAAdBallCampaign")
 
 SWIFT_CLASS("_TtC8EMMA_iOS16EMMABannerParams")
 @interface EMMABannerParams : NSObject
-@property (nonatomic) NSInteger offsetTop;
-@property (nonatomic) NSInteger offsetBottom;
+@property (nonatomic) double offsetTop;
+@property (nonatomic) double offsetBottom;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

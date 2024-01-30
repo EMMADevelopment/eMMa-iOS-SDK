@@ -103,8 +103,8 @@ import _SwiftConcurrencyShims
 }
 public typealias EMMAInAppPlugin = EMMA_iOS.EMMAInAppPluginImpl & EMMA_iOS.EMMAInAppPluginProtocol
 @objc @_inheritsConvenienceInitializers @objcMembers public class EMMABannerParams : ObjectiveC.NSObject {
-  @objc public var offsetTop: Swift.Int
-  @objc public var offsetBottom: Swift.Int
+  @objc public var offsetTop: Swift.Double
+  @objc public var offsetBottom: Swift.Double
   @objc override dynamic public init()
   @objc deinit
 }
