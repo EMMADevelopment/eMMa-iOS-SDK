@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 4.13.0 - 05/02/2024
+[NEW] setCurrencyCode method is removed. Currency code is selected in EMMA Dashboard. All prices sent in the order will not be converted by EMMA to a specific currency, they will be interpreted as a unit value. <br/>
+[NEW] Added banner offsets (top and bottom). <br/>
+[FIX] Minor bugs fixed. 
+
 ## 4.12.3 - 17/01/2024
 
 [FIX] Fixed Strip not showing in Swift UI based apps.

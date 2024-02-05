@@ -280,6 +280,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import CoreFoundation;
 @import Foundation;
 @import ObjectiveC;
+@import UIKit;
 #endif
 
 #import <EMMA_iOS/EMMA_iOS.h>
@@ -313,6 +314,14 @@ SWIFT_CLASS("_TtC8EMMA_iOS18EMMAAdBallCampaign")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (void)parseResponseInfo:(NSDictionary * _Nonnull)response;
 - (null_unspecified instancetype)initWithType:(EMMACampaignType)type SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8EMMA_iOS16EMMABannerParams")
+@interface EMMABannerParams : NSObject
+@property (nonatomic) double offsetTop;
+@property (nonatomic) double offsetBottom;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 enum EMMAClickModeType : NSInteger;
@@ -493,6 +502,9 @@ SWIFT_CLASS("_TtC8EMMA_iOS13EMMAViewUtils")
 + (UIViewController * _Nullable)getRootViewController SWIFT_WARN_UNUSED_RESULT;
 + (BOOL)isSwiftUIApp:(NSString * _Nonnull)viewControllerName SWIFT_WARN_UNUSED_RESULT;
 + (UIWindowScene * _Nullable)getMainWindowScene SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,introduced=13.0);
++ (CGRect)getStatusBarFrame SWIFT_WARN_UNUSED_RESULT;
++ (UIStatusBarStyle)getStatusBarSyle SWIFT_WARN_UNUSED_RESULT;
++ (UIInterfaceOrientation)getDeviceOrientation SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -788,6 +800,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import CoreFoundation;
 @import Foundation;
 @import ObjectiveC;
+@import UIKit;
 #endif
 
 #import <EMMA_iOS/EMMA_iOS.h>
@@ -821,6 +834,14 @@ SWIFT_CLASS("_TtC8EMMA_iOS18EMMAAdBallCampaign")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (void)parseResponseInfo:(NSDictionary * _Nonnull)response;
 - (null_unspecified instancetype)initWithType:(EMMACampaignType)type SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8EMMA_iOS16EMMABannerParams")
+@interface EMMABannerParams : NSObject
+@property (nonatomic) double offsetTop;
+@property (nonatomic) double offsetBottom;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 enum EMMAClickModeType : NSInteger;
@@ -1001,6 +1022,9 @@ SWIFT_CLASS("_TtC8EMMA_iOS13EMMAViewUtils")
 + (UIViewController * _Nullable)getRootViewController SWIFT_WARN_UNUSED_RESULT;
 + (BOOL)isSwiftUIApp:(NSString * _Nonnull)viewControllerName SWIFT_WARN_UNUSED_RESULT;
 + (UIWindowScene * _Nullable)getMainWindowScene SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,introduced=13.0);
++ (CGRect)getStatusBarFrame SWIFT_WARN_UNUSED_RESULT;
++ (UIStatusBarStyle)getStatusBarSyle SWIFT_WARN_UNUSED_RESULT;
++ (UIInterfaceOrientation)getDeviceOrientation SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
