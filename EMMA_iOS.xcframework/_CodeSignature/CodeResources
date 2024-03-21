@@ -102,7 +102,7 @@
 		</data>
 		<key>ios-arm64/EMMA_iOS.framework/PrivacyInfo.xcprivacy</key>
 		<data>
-		j4tQqO7O2uSFLJxeNHGI7JTBnVU=
+		vr1yZfPU4WEy0EXDBFMqXSuiZiQ=
 		</data>
 		<key>ios-arm64_x86_64-simulator/EMMA_iOS.framework/Assets.car</key>
 		<data>
@@ -110,7 +110,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/EMMA_iOS.framework/EMMA_iOS</key>
 		<data>
-		CLi49Zgqp917YIcAu3trptrV90I=
+		Qvtp3SmEC0wxzR6pyGxuMN53X+0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/EMMA_iOS.framework/Headers/EMMACampaign.h</key>
 		<data>
@@ -218,11 +218,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/EMMA_iOS.framework/PrivacyInfo.xcprivacy</key>
 		<data>
-		j4tQqO7O2uSFLJxeNHGI7JTBnVU=
+		vr1yZfPU4WEy0EXDBFMqXSuiZiQ=
 		</data>
 		<key>ios-arm64_x86_64-simulator/EMMA_iOS.framework/_CodeSignature/CodeResources</key>
 		<data>
-		9huARkCzAkWS7RN8s5ZtKIUS4oE=
+		GC9FzNOoz7pqxdEi9cruiomgO3I=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -495,11 +495,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			j4tQqO7O2uSFLJxeNHGI7JTBnVU=
+			vr1yZfPU4WEy0EXDBFMqXSuiZiQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			oihoOphxP6j1V4E6d6qHFbYBFmHGBgFMKbrWsyGzbRk=
+			XzpmbSSIsgoX58ggyLe3OVLOHTCKXaLELcPSYFGA1T0=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/EMMA_iOS.framework/Assets.car</key>
@@ -517,11 +517,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CLi49Zgqp917YIcAu3trptrV90I=
+			Qvtp3SmEC0wxzR6pyGxuMN53X+0=
 			</data>
 			<key>hash2</key>
 			<data>
-			exYY03MO4GjUFNN3UEnTO6Xz2ujsV+RJ7rPwTiVUZ8A=
+			CfRgTOvPWIYSx0fQmNIqMOpswCDlzwq9uESaIKnDIIY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/EMMA_iOS.framework/Headers/EMMACampaign.h</key>
@@ -814,22 +814,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			j4tQqO7O2uSFLJxeNHGI7JTBnVU=
+			vr1yZfPU4WEy0EXDBFMqXSuiZiQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			oihoOphxP6j1V4E6d6qHFbYBFmHGBgFMKbrWsyGzbRk=
+			XzpmbSSIsgoX58ggyLe3OVLOHTCKXaLELcPSYFGA1T0=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/EMMA_iOS.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9huARkCzAkWS7RN8s5ZtKIUS4oE=
+			GC9FzNOoz7pqxdEi9cruiomgO3I=
 			</data>
 			<key>hash2</key>
 			<data>
-			7aExdYQqIRWqUvkLUN+267FSKPlEgODN+70qOzyvxjM=
+			WMZ3C194GJpBiw98Qf3OCixyo6XDOnBYiojuJuMmTZE=
 			</data>
 		</dict>
 	</dict>
