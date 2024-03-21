@@ -6322,7 +6322,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "EMMAInstallAttributionDelegate",
-                "printedName": "EMMA_iOS.EMMAInstallAttributionDelegate",
+                "printedName": "any EMMA_iOS.EMMAInstallAttributionDelegate",
                 "usr": "c:objc(pl)EMMAInstallAttributionDelegate"
               }
             ],
@@ -6357,12 +6357,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "EMMA_iOS.EMMAInAppMessageDelegate?",
+                "printedName": "(any EMMA_iOS.EMMAInAppMessageDelegate)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "EMMAInAppMessageDelegate",
-                    "printedName": "EMMA_iOS.EMMAInAppMessageDelegate",
+                    "printedName": "any EMMA_iOS.EMMAInAppMessageDelegate",
                     "usr": "c:objc(pl)EMMAInAppMessageDelegate"
                   }
                 ],
@@ -6395,7 +6395,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "EMMAInAppMessageDelegate",
-                "printedName": "EMMA_iOS.EMMAInAppMessageDelegate",
+                "printedName": "any EMMA_iOS.EMMAInAppMessageDelegate",
                 "usr": "c:objc(pl)EMMAInAppMessageDelegate"
               }
             ],
@@ -6424,7 +6424,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "EMMAInAppMessageDelegate",
-                "printedName": "EMMA_iOS.EMMAInAppMessageDelegate",
+                "printedName": "any EMMA_iOS.EMMAInAppMessageDelegate",
                 "usr": "c:objc(pl)EMMAInAppMessageDelegate"
               }
             ],
@@ -6453,7 +6453,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "EMMACouponDelegate",
-                "printedName": "EMMA_iOS.EMMACouponDelegate",
+                "printedName": "any EMMA_iOS.EMMACouponDelegate",
                 "usr": "c:objc(pl)EMMACouponDelegate"
               }
             ],
@@ -6610,7 +6610,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "EMMAStartViewDelegate",
-                "printedName": "EMMA_iOS.EMMAStartViewDelegate",
+                "printedName": "any EMMA_iOS.EMMAStartViewDelegate",
                 "usr": "c:objc(pl)EMMAStartViewDelegate"
               }
             ],
@@ -7444,7 +7444,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "EMMAPushDelegate",
-                "printedName": "EMMA_iOS.EMMAPushDelegate",
+                "printedName": "any EMMA_iOS.EMMAPushDelegate",
                 "usr": "c:objc(pl)EMMAPushDelegate"
               }
             ],
@@ -7473,7 +7473,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "UNUserNotificationCenterDelegate",
-                "printedName": "UserNotifications.UNUserNotificationCenterDelegate",
+                "printedName": "any UserNotifications.UNUserNotificationCenterDelegate",
                 "usr": "c:objc(pl)UNUserNotificationCenterDelegate"
               }
             ],
@@ -7770,12 +7770,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[EMMA_iOS.EMMAInAppPluginProtocol]",
+                "printedName": "[any EMMA_iOS.EMMAInAppPluginProtocol]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "EMMAInAppPluginProtocol",
-                    "printedName": "EMMA_iOS.EMMAInAppPluginProtocol",
+                    "printedName": "any EMMA_iOS.EMMAInAppPluginProtocol",
                     "usr": "c:@M@EMMA_iOS@objc(pl)EMMAInAppPluginProtocol"
                   }
                 ],
@@ -7874,12 +7874,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((Swift.Error?) -> ())?",
+                "printedName": "(((any Swift.Error)?) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Error?) -> ()",
+                    "printedName": "((any Swift.Error)?) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -7889,12 +7889,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Optional",
-                        "printedName": "Swift.Error?",
+                        "printedName": "(any Swift.Error)?",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -7943,12 +7943,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((Swift.Error?) -> ())?",
+                "printedName": "(((any Swift.Error)?) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Error?) -> ()",
+                    "printedName": "((any Swift.Error)?) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -7958,12 +7958,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Optional",
-                        "printedName": "Swift.Error?",
+                        "printedName": "(any Swift.Error)?",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -8018,12 +8018,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((Swift.Error?) -> ())?",
+                "printedName": "(((any Swift.Error)?) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Error?) -> ()",
+                    "printedName": "((any Swift.Error)?) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -8033,12 +8033,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Optional",
-                        "printedName": "Swift.Error?",
+                        "printedName": "(any Swift.Error)?",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -8410,7 +8410,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Dictionary",
-                "printedName": "[Swift.String : EMMA_iOS.EMMAInAppPluginProtocol]",
+                "printedName": "[Swift.String : any EMMA_iOS.EMMAInAppPluginProtocol]",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -8421,7 +8421,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "EMMAInAppPluginProtocol",
-                    "printedName": "EMMA_iOS.EMMAInAppPluginProtocol",
+                    "printedName": "any EMMA_iOS.EMMAInAppPluginProtocol",
                     "usr": "c:@M@EMMA_iOS@objc(pl)EMMAInAppPluginProtocol"
                   }
                 ],
@@ -8449,7 +8449,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Dictionary",
-                    "printedName": "[Swift.String : EMMA_iOS.EMMAInAppPluginProtocol]",
+                    "printedName": "[Swift.String : any EMMA_iOS.EMMAInAppPluginProtocol]",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -8460,7 +8460,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "EMMAInAppPluginProtocol",
-                        "printedName": "EMMA_iOS.EMMAInAppPluginProtocol",
+                        "printedName": "any EMMA_iOS.EMMAInAppPluginProtocol",
                         "usr": "c:@M@EMMA_iOS@objc(pl)EMMAInAppPluginProtocol"
                       }
                     ],
@@ -8492,12 +8492,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[EMMA_iOS.EMMAInAppPluginProtocol]",
+                "printedName": "[any EMMA_iOS.EMMAInAppPluginProtocol]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "EMMAInAppPluginProtocol",
-                    "printedName": "EMMA_iOS.EMMAInAppPluginProtocol",
+                    "printedName": "any EMMA_iOS.EMMAInAppPluginProtocol",
                     "usr": "c:@M@EMMA_iOS@objc(pl)EMMAInAppPluginProtocol"
                   }
                 ],
