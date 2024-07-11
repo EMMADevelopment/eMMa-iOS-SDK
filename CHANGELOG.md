@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.14.0 - 11/07/2024
+
+[NEW] Added new method `sendDismissedClick` to send clicks when inapp is dismissed.
+
 ## 4.13.1 - 21/03/2024
 
 [NEW] Added PrivacyInfo.xcprivacy and XCFramework signature.
