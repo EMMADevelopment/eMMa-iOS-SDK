@@ -1,4 +1,9 @@
 # CHANGELOG
+## 4.15.0 - 26/09/2024
+
+[NEW] Added new install attribution info callback in start session <br/>
+[NEW] When a link with the parameter st_open_browser=true is opened in the webview, the url is launched in the browser <br/>
+[IMPROVE] Sessions with times less than 10 seconds are discarded
 
 ## 4.14.0 - 11/07/2024
 

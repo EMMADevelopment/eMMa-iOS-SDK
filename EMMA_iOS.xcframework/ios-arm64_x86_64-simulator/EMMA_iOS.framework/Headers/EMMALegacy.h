@@ -691,5 +691,7 @@
 
 +(void) setBannerParams: (EMMABannerParams*) bannerParams;
 
++(NSString*) lastRetargetingClickKey;
+
 #pragma clang diagnostic pop
 @end
