@@ -1,4 +1,12 @@
 # CHANGELOG
+## 4.15.1 - 26/12/2024
+
+[IMPROVE] Implemented a solution to prevent ST, AdBall, and Strip from appearing simultaneously <br/>
+[IMPROVE] Enhanced AdBall visualization when running in UIKit with a Strip on screen <br/>
+[IMPROVE] Added padding to the AdBall in the bottom corners to improve UI/UX <br/>
+[IMPROVE] Adjusted trash view dimensions to resolve issues with AdBall dragging <br/>
+[FIX] Fixed an issue where rules were not executed when a Strip was active 
+
 ## 4.15.0 - 26/09/2024
 
 [NEW] Added new install attribution info callback in start session <br/>
