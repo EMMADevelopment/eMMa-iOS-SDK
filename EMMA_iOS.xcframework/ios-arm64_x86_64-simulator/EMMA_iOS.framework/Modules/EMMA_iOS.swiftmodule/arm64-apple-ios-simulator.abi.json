@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "EMMA_iOS",
+    "printedName": "EMMA_iOS",
     "children": [
       {
         "kind": "Import",
@@ -356,6 +356,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -532,6 +546,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -855,6 +883,20 @@
         ],
         "enumRawTypeName": "Int",
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -1193,6 +1235,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -1485,6 +1541,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -1954,6 +2024,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -2089,6 +2173,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -2709,6 +2807,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -3411,6 +3523,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -3564,6 +3690,22 @@
         "declAttributes": [
           "AccessControl",
           "ObjC"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -3782,6 +3924,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -4076,6 +4232,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -4860,6 +5030,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -5089,6 +5273,20 @@
         ],
         "enumRawTypeName": "Int",
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -5649,6 +5847,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -8259,7 +8471,23 @@
           "AccessControl",
           "RawDocComment"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -8462,6 +8690,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -8604,6 +8846,123 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "temporaryPluginStorage",
+            "printedName": "temporaryPluginStorage",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "EMMA_iOS.EMMANativeAd?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EMMANativeAd",
+                    "printedName": "EMMA_iOS.EMMANativeAd",
+                    "usr": "c:objc(cs)EMMANativeAd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@EMMA_iOS@objc(cs)EMMAInAppPluginController(py)temporaryPluginStorage",
+            "mangledName": "$s8EMMA_iOS25EMMAInAppPluginControllerC09temporaryE7StorageSo12EMMANativeAdCSgvp",
+            "moduleName": "EMMA_iOS",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "EMMA_iOS.EMMANativeAd?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EMMANativeAd",
+                        "printedName": "EMMA_iOS.EMMANativeAd",
+                        "usr": "c:objc(cs)EMMANativeAd"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@EMMA_iOS@objc(cs)EMMAInAppPluginController(im)temporaryPluginStorage",
+                "mangledName": "$s8EMMA_iOS25EMMAInAppPluginControllerC09temporaryE7StorageSo12EMMANativeAdCSgvg",
+                "moduleName": "EMMA_iOS",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "EMMA_iOS.EMMANativeAd?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EMMANativeAd",
+                        "printedName": "EMMA_iOS.EMMANativeAd",
+                        "usr": "c:objc(cs)EMMANativeAd"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@EMMA_iOS@objc(cs)EMMAInAppPluginController(im)setTemporaryPluginStorage:",
+                "mangledName": "$s8EMMA_iOS25EMMAInAppPluginControllerC09temporaryE7StorageSo12EMMANativeAdCSgvs",
+                "moduleName": "EMMA_iOS",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8EMMA_iOS25EMMAInAppPluginControllerC09temporaryE7StorageSo12EMMANativeAdCSgvM",
+                "mangledName": "$s8EMMA_iOS25EMMAInAppPluginControllerC09temporaryE7StorageSo12EMMANativeAdCSgvM",
+                "moduleName": "EMMA_iOS",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "addPlugins",
             "printedName": "addPlugins(_:)",
@@ -8667,6 +9026,33 @@
             "funcSelfKind": "NonMutating"
           },
           {
+            "kind": "Function",
+            "name": "showPlugin",
+            "printedName": "showPlugin(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "EMMANativeAd",
+                "printedName": "EMMA_iOS.EMMANativeAd",
+                "usr": "c:objc(cs)EMMANativeAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@EMMA_iOS@objc(cs)EMMAInAppPluginController(im)showPlugin:",
+            "mangledName": "$s8EMMA_iOS25EMMAInAppPluginControllerC04showE0yySo12EMMANativeAdCF",
+            "moduleName": "EMMA_iOS",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -8708,6 +9094,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -8991,6 +9391,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -9130,27 +9544,6 @@
     },
     {
       "filePath": "\/Users\/adrian.carrera\/Documents\/devel\/emma-sdk-ios\/EMMA\/EMMASwift\/Utils\/Model\/EMMAClickMode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 220,
-      "length": 8,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/adrian.carrera\/Documents\/devel\/emma-sdk-ios\/EMMA\/EMMASwift\/Utils\/Model\/EMMAClickMode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 238,
-      "length": 9,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/adrian.carrera\/Documents\/devel\/emma-sdk-ios\/EMMA\/EMMASwift\/Utils\/Model\/EMMAClickMode.swift",
-      "kind": "IntegerLiteral",
-      "offset": 257,
-      "length": 9,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/adrian.carrera\/Documents\/devel\/emma-sdk-ios\/EMMA\/EMMASwift\/Utils\/Model\/EMMAClickMode.swift",
       "kind": "StringLiteral",
       "offset": 718,
       "length": 6,
@@ -9227,32 +9620,11 @@
       "value": "0"
     },
     {
-      "filePath": "\/Users\/adrian.carrera\/Documents\/devel\/emma-sdk-ios\/EMMA\/EMMASwift\/Utils\/Model\/EMMAAdBallCampaign.swift",
-      "kind": "StringLiteral",
-      "offset": 189,
-      "length": 18,
-      "value": "\"EMMA_iOS.EMMAAdBallCampaign\""
-    },
-    {
       "filePath": "\/Users\/adrian.carrera\/Documents\/devel\/emma-sdk-ios\/EMMA\/EMMASwift\/Utils\/Model\/EMMAPush.swift",
       "kind": "BooleanLiteral",
       "offset": 319,
       "length": 5,
       "value": "false"
-    },
-    {
-      "filePath": "\/Users\/adrian.carrera\/Documents\/devel\/emma-sdk-ios\/EMMA\/EMMASwift\/Utils\/Model\/EMMAPush.swift",
-      "kind": "StringLiteral",
-      "offset": 181,
-      "length": 8,
-      "value": "\"EMMA_iOS.EMMAPush\""
-    },
-    {
-      "filePath": "\/Users\/adrian.carrera\/Documents\/devel\/emma-sdk-ios\/EMMA\/EMMASwift\/Utils\/Model\/EMMAPush.swift",
-      "kind": "StringLiteral",
-      "offset": 181,
-      "length": 8,
-      "value": "\"EMMA_iOS.EMMAPush\""
     },
     {
       "filePath": "\/Users\/adrian.carrera\/Documents\/devel\/emma-sdk-ios\/EMMA\/EMMASwift\/Utils\/Model\/EMMANativeAdField.swift",
@@ -9305,13 +9677,6 @@
     },
     {
       "filePath": "\/Users\/adrian.carrera\/Documents\/devel\/emma-sdk-ios\/EMMA\/EMMASwift\/Utils\/Model\/EMMAPushActionButton.swift",
-      "kind": "IntegerLiteral",
-      "offset": 229,
-      "length": 6,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/adrian.carrera\/Documents\/devel\/emma-sdk-ios\/EMMA\/EMMASwift\/Utils\/Model\/EMMAPushActionButton.swift",
       "kind": "StringLiteral",
       "offset": 344,
       "length": 4,
@@ -9344,13 +9709,6 @@
       "offset": 477,
       "length": 9,
       "value": "\"ic_type\""
-    },
-    {
-      "filePath": "\/Users\/adrian.carrera\/Documents\/devel\/emma-sdk-ios\/EMMA\/EMMASwift\/Utils\/Model\/EMMAPushActionButton.swift",
-      "kind": "StringLiteral",
-      "offset": 265,
-      "length": 20,
-      "value": "\"EMMA_iOS.EMMAPushActionButton\""
     },
     {
       "filePath": "\/Users\/adrian.carrera\/Documents\/devel\/emma-sdk-ios\/EMMA\/EMMASwift\/Utils\/Model\/EMMAPushPayload.swift",
@@ -9486,13 +9844,6 @@
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/adrian.carrera\/Documents\/devel\/emma-sdk-ios\/EMMA\/EMMASwift\/Utils\/Model\/EMMAPushPayload.swift",
-      "kind": "StringLiteral",
-      "offset": 195,
-      "length": 15,
-      "value": "\"EMMA_iOS.EMMAPushPayload\""
-    },
-    {
       "filePath": "\/Users\/adrian.carrera\/Documents\/devel\/emma-sdk-ios\/EMMA\/EMMASwift\/Controllers\/EMMAInAppPluginController.swift",
       "kind": "Dictionary",
       "offset": 313,
@@ -9519,13 +9870,6 @@
       "offset": 375,
       "length": 8,
       "value": "\"ctaUrl\""
-    },
-    {
-      "filePath": "\/Users\/adrian.carrera\/Documents\/devel\/emma-sdk-ios\/EMMA\/EMMASwift\/Utils\/Model\/EMMAStartViewCampaign.swift",
-      "kind": "StringLiteral",
-      "offset": 193,
-      "length": 21,
-      "value": "\"EMMA_iOS.EMMAStartViewCampaign\""
     },
     {
       "filePath": "\/Users\/adrian.carrera\/Library\/Developer\/Xcode\/DerivedData\/EMMA-dbzqppgfuyfjrjghsthbbaolahex\/Build\/Intermediates.noindex\/ArchiveIntermediates\/EMMA_iOS\/IntermediateBuildFilesPath\/EMMA.build\/Release-iphonesimulator\/EMMA_iOS.build\/DerivedSources\/GeneratedAssetSymbols.swift",

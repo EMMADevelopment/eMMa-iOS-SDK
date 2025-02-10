@@ -1,4 +1,7 @@
 # CHANGELOG
+## 4.15.2 - 10/02/2025
+[IMPROVE] Prism and StartView are now displayed in the correct order, StartView is always displayed on top of any format
+
 ## 4.15.1 - 26/12/2024
 
 [IMPROVE] Implemented a solution to prevent ST, AdBall, and Strip from appearing simultaneously <br/>
