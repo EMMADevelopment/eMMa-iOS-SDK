@@ -1,4 +1,7 @@
 # CHANGELOG
+## 4.15.3 - 10/03/2025
+[FIX] Added communication params for NativeAd
+
 ## 4.15.2 - 10/02/2025
 [IMPROVE] Prism and StartView are now displayed in the correct order, StartView is always displayed on top of any format
 
