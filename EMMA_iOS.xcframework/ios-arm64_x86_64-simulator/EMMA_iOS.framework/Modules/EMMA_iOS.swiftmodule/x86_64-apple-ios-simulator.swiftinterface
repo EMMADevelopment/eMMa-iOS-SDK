@@ -227,6 +227,7 @@ public typealias EMMAInAppPlugin = EMMA_iOS.EMMAInAppPluginImpl & EMMA_iOS.EMMAI
   public static func updateConversionValue(_ conversionValue: Swift.Int)
   public static func setBannerParams(_ params: EMMA_iOS.EMMABannerParams?)
   public static func lastRetargetingClickKey() -> Swift.String
+  public static func setUserLanguage(_ language: Swift.String)
   @objc deinit
 }
 @objc @objcMembers public class EMMAPushPayload : ObjectiveC.NSObject {

@@ -1,4 +1,7 @@
 # CHANGELOG
+## 4.15.4 - 04/04/2025
+[NEW] Added a new setLanguage method to the SDK, allowing users to manually set the language instead of relying on automatic detection.
+
 ## 4.15.3 - 10/03/2025
 [FIX] Added communication params for NativeAd
 
