@@ -1,4 +1,8 @@
 # CHANGELOG
+## 4.15.5 - 29/08/2025
+[FIX] Communication formats that rely on a WebView, such as StartView, Adball, NativeAd (with SDK-managed opening), or Rich Push, are unexpectedly dismissed when opened on iOS 26 <br/>  
+[FIX] The closeInApp method with the banner type did not work as expected and sometimes the banner would not close
+
 ## 4.15.4 - 04/04/2025
 [NEW] Added a new setLanguage method to the SDK, allowing users to manually set the language instead of relying on automatic detection.
 
