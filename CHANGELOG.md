@@ -1,4 +1,10 @@
 # CHANGELOG
+## 4.15.6
+[IMPROVED] Improved concurrent access handling in `EMMAEventController`, `EMMAInAppPluginController`, `EMMALocationController`, and `setShortPowlinkDomains` <br/>
+[FIX] Added encoding for the "+" symbol in the parameters of `EMMARequest` <br/>
+[FIX] Changed the way Banner dimensions are calculated <br/>
+[FIX] Changed the print submission from StartView initialization to the moment of display
+
 ## 4.15.5 - 29/08/2025
 [FIX] Communication formats that rely on a WebView, such as StartView, Adball, NativeAd (with SDK-managed opening), or Rich Push, are unexpectedly dismissed when opened on iOS 26 <br/>  
 [FIX] The closeInApp method with the banner type did not work as expected and sometimes the banner would not close
