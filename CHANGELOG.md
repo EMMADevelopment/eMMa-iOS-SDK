@@ -1,21 +1,39 @@
 # CHANGELOG
-## 4.15.6
+
+## 4.16.0 - 25/02/2026
+
+[NEW] Added setEmail method to set the user's email <br/>
+[NEW] Added setUserProfile method to manage the user's profile <br/>
+[NEW] Added trackUserTags method to track user tags <br/>
+[DEPRECATED] trackExtraUserInfo method deprecated in favor of trackUserTags <br/>
+[IMPROVE] Refactored setCustomerId <br/>
+[FIX] Added STKPrewarmingViewController to the auto-event blacklist <br/>
+[NEW] Added trackPurchase as a new unified method for purchase tracking <br/>
+[IMPROVE] Internal refactor renaming order to purchase for improved consistency.
+[NEW] Added unregisterPushSystem method to unsubscribe from the push notification system.
+
+## 4.15.6 - 13/11/2025
+
 [IMPROVED] Improved concurrent access handling in `EMMAEventController`, `EMMAInAppPluginController`, `EMMALocationController`, and `setShortPowlinkDomains` <br/>
 [FIX] Added encoding for the "+" symbol in the parameters of `EMMARequest` <br/>
 [FIX] Changed the way Banner dimensions are calculated <br/>
 [FIX] Changed the print submission from StartView initialization to the moment of display
 
 ## 4.15.5 - 29/08/2025
+
 [FIX] Communication formats that rely on a WebView, such as StartView, Adball, NativeAd (with SDK-managed opening), or Rich Push, are unexpectedly dismissed when opened on iOS 26 <br/>  
 [FIX] The closeInApp method with the banner type did not work as expected and sometimes the banner would not close
 
 ## 4.15.4 - 04/04/2025
+
 [NEW] Added a new setLanguage method to the SDK, allowing users to manually set the language instead of relying on automatic detection.
 
 ## 4.15.3 - 10/03/2025
+
 [FIX] Added communication params for NativeAd
 
 ## 4.15.2 - 10/02/2025
+
 [IMPROVE] Prism and StartView are now displayed in the correct order, StartView is always displayed on top of any format
 
 ## 4.15.1 - 26/12/2024
@@ -24,7 +42,7 @@
 [IMPROVE] Enhanced AdBall visualization when running in UIKit with a Strip on screen <br/>
 [IMPROVE] Added padding to the AdBall in the bottom corners to improve UI/UX <br/>
 [IMPROVE] Adjusted trash view dimensions to resolve issues with AdBall dragging <br/>
-[FIX] Fixed an issue where rules were not executed when a Strip was active 
+[FIX] Fixed an issue where rules were not executed when a Strip was active
 
 ## 4.15.0 - 26/09/2024
 
