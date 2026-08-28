@@ -1,5 +1,12 @@
 # CHANGELOG
 
+# 4.17.0 - 28/08/2026
+
+- **NEW** Añadidos métodos `login()` y `register()` sin `customerId` ni email, que permiten autenticar o registrar usuarios de forma anónima o reutilizando los datos guardados en el dispositivo <br/>
+- **FIX** Corregido crash por acceso concurrente en la cola de red al procesar múltiples respuestas de native ads de forma simultánea <br/>
+- **FIX** Corregido artefacto visual (degradado no deseado) en el componente strip en iOS 27 <br/>
+- **IMPROVE** Actualizado el deployment target mínimo del SDK a iOS 12.0.
+
 ## 4.16.0 - 25/02/2026
 
 [NEW] Added setEmail method to set the user's email <br/>
